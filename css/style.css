@@ -1,0 +1,359 @@
+/*  PORTFOLIO — DELT STYLESHEET
+   Indeholder: tokens, reset, navigation, alle komponenter, responsivt layout (mobile-first). */
+/* Google Fonts: Mona Sans + Inter + Fragment Mono */
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&family=Inter:ital,wght@0,300..700;1,300..700&family=Fragment+Mono:ital@0;1&display=swap");
+
+/* em - styling */
+em {
+  font-style: normal;
+}
+:root {
+  /* Palette t1-t6*/
+  --t1: #b5b1d8;
+  --t2: #d6b43e;
+  --t3: #f48067;
+  --t4: #bce4e5;
+  --t5: #bc892b;
+  --t6: #ffefae;
+  /* Basisfarver */
+  --sort: #0d0d0b;
+  --papir: #fafafa;
+  --sten: #6b6560;
+  --kant: #e2e2e0;
+  --kant-tyk: #cfcfcd;
+
+  /* --accent sættes individuelt i sidernes CSS */
+  --accent: var(--t1);
+
+  /* Typografi */
+  --serif: "Mona Sans", "Arial Black", system-ui, sans-serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --mono: "Fragment Mono", "Courier New", monospace;
+
+  /* Layout */
+  --nav-h: 56px;
+  --gap: 20px;
+  --radius: 2px;
+  --trans: 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/*  RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--papir);
+  color: var(--sort);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*  NAV LOGO  */
+
+.nav-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.nav-logo-default,
+.nav-logo-hover {
+  display: block;
+  line-height: 0;
+  transition: opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-logo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.nav-logo:hover .nav-logo-default {
+  opacity: 0;
+}
+.nav-logo:hover .nav-logo-hover {
+  opacity: 1;
+}
+
+.top-nav {
+  height: 64px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0 var(--gap);
+  border-bottom: 1px solid var(--kant);
+  position: sticky;
+  top: 0;
+  background: var(--papir);
+  z-index: 500;
+}
+
+.nav-navn {
+  display: none;
+}
+
+.burger-knap {
+  align-self: center;
+}
+
+/* Desktop-links — skjult på mobil */
+.nav-links {
+  display: none;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: stretch;
+  border-left: 1px solid var(--kant);
+}
+
+.nav-links a {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--sten);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  transition: color var(--trans);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sort);
+  transition: width var(--trans);
+}
+
+.nav-links a:hover {
+  color: var(--sort);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.aktiv {
+  color: var(--sort);
+  font-weight: 600;
+}
+
+.nav-links a.aktiv::after {
+  width: 100%;
+}
+
+/* Hamburger-knap */
+.burger-knap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin: -6px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.burger-knap span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--sort);
+  transition:
+    transform var(--trans),
+    opacity var(--trans);
+}
+
+.burger-knap[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.burger-knap[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-knap[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobil-menu */
+.mobil-menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  background: var(--papir);
+  border-bottom: 1px solid var(--kant);
+  z-index: 499;
+}
+
+.mobil-menu.aaben {
+  display: flex;
+}
+
+.mobil-menu li {
+  border-bottom: 1px solid var(--kant);
+}
+
+.mobil-menu li:last-child {
+  border-bottom: none;
+}
+
+.mobil-menu a {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sten);
+  padding: 16px var(--gap);
+  display: block;
+  transition:
+    color var(--trans),
+    background var(--trans);
+}
+
+.mobil-menu a:hover,
+.mobil-menu a:focus {
+  color: var(--sort);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.mobil-menu a.aktiv {
+  color: var(--sort);
+}
+
+/* SEKTION-BAR */
+
+.sektion-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px var(--gap);
+  border-bottom: 1px solid var(--kant);
+}
+
+.sektion-tekst {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sten);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px var(--gap);
+  border-top: 1px solid var(--kant);
+}
+
+.footer-tekst {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sten);
+}
+
+/* BREAKPOINT: 600px — nav links visible, burger hidden */
+
+@media (min-width: 600px) {
+  :root {
+    --gap: 32px;
+    --nav-h: 64px;
+  }
+  .top-nav {
+    height: 64px;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .burger-knap {
+    display: none;
+  }
+}
+
+/* ANIMATIONER */
+
+@keyframes fadeop {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes indfad {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tema farver — bruges på kort-bg (index) og side-bg (t1-t6) */
+
+.t1-bg {
+  background: var(--t1);
+}
+.t2-bg {
+  background: var(--t2);
+}
+.t3-bg {
+  background: var(--t3);
+}
+.t4-bg {
+  background: var(--t4);
+}
+.t5-bg {
+  background: var(--t5);
+}
+.t6-bg {
+  background: var(--t6);
+}

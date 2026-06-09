@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T4 Brugergrænsefladeudvikling — Daria Novikova</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tema-base.css" />
+    <link rel="stylesheet" href="css/t4.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicons/favicon-dark.ico" />
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon-dark.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon-light.svg" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-dark-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-dark-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-dark.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/favicon-dark-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicons/favicon-dark-512x512.png" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="top-nav" aria-label="Sidenavigation">
+      <a href="index.html" class="nav-logo" aria-label="Gå til startside">
+        <span class="nav-logo-default" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 85.46 85.46" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42.73" cy="42.73" r="42.73" fill="#0d0d0b" />
+            <path d="M33.98,59.08h16.02v6.83c0,1.58-.33,2.92-1,4.02s-1.6,1.93-2.8,2.5c-1.2.57-2.61.86-4.22.86-1.19,0-2.27-.16-3.26-.48s-1.83-.8-2.54-1.43-1.25-1.4-1.63-2.32c-.38-.92-.57-1.97-.57-3.15v-6.83ZM36.9,62.5v2.83c0,.64.09,1.24.26,1.78s.46,1.01.86,1.41.92.7,1.58.92,1.47.33,2.44.33c1.26,0,2.26-.19,2.99-.56.73-.37,1.26-.89,1.58-1.56.32-.67.48-1.44.48-2.32v-2.83h-10.2Z" fill="#fafafa" />
+            <path d="M21.73,35.25l-5.18-1.72v3.56l3.3,1.02v6.35l-3.3,1.02v3.56l16.02-5.31v-4.88l-10.84-3.6ZM29.98,41.38l-2.07.59-5.42,1.67v-4.71l5.42,1.68,2.07.61v.16Z" fill="#fafafa" />
+            <path d="M44.59,21.53c.16-.36.4-.6.71-.74.31-.14.69-.21,1.14-.21h2.05c.38,0,.73-.02,1.05-.05.32-.04.58-.1.77-.19v-3.45c-.31.13-.62.21-.92.23-.31.02-.61.03-.9.03h-2.64c-.6,0-1.11.09-1.53.27-.42.17-.76.45-1.03.84-.27.39-.46.89-.56,1.51h-.13c-.25-.91-.72-1.63-1.4-2.16-.68-.52-1.52-.79-2.51-.79-.59,0-1.12.08-1.59.24-.47.17-.88.4-1.23.7-.35.3-.64.66-.88,1.1-.23.43-.41.91-.52,1.46-.12.54-.18,1.14-.18,1.8v8.15h16.02v-3.43h-5.98v-3.8c0-.66.09-1.16.26-1.51ZM37.13,26.84v-3.93c0-.38.04-.73.12-1.03.08-.31.21-.58.38-.82.18-.23.4-.41.67-.53.27-.13.61-.19,1.02-.19.66,0,1.21.2,1.65.59.44.4.66,1.06.66,1.98v3.93h-4.5Z" fill="#fafafa" />
+            <path d="M40.09,53.85v-16.02h3.43v16.02h-3.43Z" fill="#fafafa" />
+            <path d="M67.17,37.01v-3.56l-16.02,5.31v4.88l16.02,5.32v-3.56l-3.3-1.02v-6.35l3.3-1.02ZM61.24,43.56l-5.43-1.68-2.07-.61v-.16l2.07-.59,5.43-1.68v4.72Z" fill="#fafafa" />
+          </svg>
+        </span>
+        <span class="nav-logo-hover" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 85.46 85.46" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42.73" cy="42.73" r="42.73" fill="#ffefae" />
+            <path d="M33.98,59.08h16.02v6.83c0,1.58-.33,2.92-1,4.02s-1.6,1.93-2.8,2.5c-1.2.57-2.61.86-4.22.86-1.19,0-2.27-.16-3.26-.48s-1.83-.8-2.54-1.43-1.25-1.4-1.63-2.32c-.38-.92-.57-1.97-.57-3.15v-6.83ZM36.9,62.5v2.83c0,.64.09,1.24.26,1.78s.46,1.01.86,1.41.92.7,1.58.92,1.47.33,2.44.33c1.26,0,2.26-.19,2.99-.56.73-.37,1.26-.89,1.58-1.56.32-.67.48-1.44.48-2.32v-2.83h-10.2Z" fill="#0d0d0b" />
+            <path d="M21.73,35.25l-5.18-1.72v3.56l3.3,1.02v6.35l-3.3,1.02v3.56l16.02-5.31v-4.88l-10.84-3.6ZM29.98,41.38l-2.07.59-5.42,1.67v-4.71l5.42,1.68,2.07.61v.16Z" fill="#0d0d0b" />
+            <path d="M44.59,21.53c.16-.36.4-.6.71-.74.31-.14.69-.21,1.14-.21h2.05c.38,0,.73-.02,1.05-.05.32-.04.58-.1.77-.19v-3.45c-.31.13-.62.21-.92.23-.31.02-.61.03-.9.03h-2.64c-.6,0-1.11.09-1.53.27-.42.17-.76.45-1.03.84-.27.39-.46.89-.56,1.51h-.13c-.25-.91-.72-1.63-1.4-2.16-.68-.52-1.52-.79-2.51-.79-.59,0-1.12.08-1.59.24-.47.17-.88.4-1.23.7-.35.3-.64.66-.88,1.1-.23.43-.41.91-.52,1.46-.12.54-.18,1.14-.18,1.8v8.15h16.02v-3.43h-5.98v-3.8c0-.66.09-1.16.26-1.51ZM37.13,26.84v-3.93c0-.38.04-.73.12-1.03.08-.31.21-.58.38-.82.18-.23.4-.41.67-.53.27-.13.61-.19,1.02-.19.66,0,1.21.2,1.65.59.44.4.66,1.06.66,1.98v3.93h-4.5Z" fill="#0d0d0b" />
+            <path d="M40.09,53.85v-16.02h3.43v16.02h-3.43Z" fill="#0d0d0b" />
+            <path d="M67.17,37.01v-3.56l-16.02,5.31v4.88l16.02,5.32v-3.56l-3.3-1.02v-6.35l3.3-1.02ZM61.24,43.56l-5.43-1.68-2.07-.61v-.16l2.07-.59,5.43-1.68v4.72Z" fill="#0d0d0b" />
+          </svg>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#projekter" class="aktiv">Projekter</a></li>
+        <li><a href="om-mig.html">Om mig</a></li>
+        <li><a href="index.html#refleksion">Refleksion</a></li>
+      </ul>
+      <button type="button" class="burger-knap" aria-label="Åbn menu" aria-expanded="false" aria-controls="mobil-menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <!-- Mobil menu -->
+    <ul class="mobil-menu" id="mobil-menu">
+      <li><a href="index.html#projekter" class="aktiv">Projekter</a></li>
+      <li><a href="om-mig.html">Om mig</a></li>
+      <li><a href="index.html#refleksion">Refleksion</a></li>
+    </ul>
+
+    <!-- Projekt Layout Container -->
+    <div class="projekt-layout">
+      <nav class="mobil-sek-nav">
+        <a href="#s1">Overblik</a>
+        <a href="#s2">Opgaven</a>
+        <a href="#s3">Processen</a>
+        <a href="#s4">Min løsning</a>
+        <a href="#s5">Hvad lærte jeg?</a>
+      </nav>
+
+      <main class="projekt-indhold" id="hoved-indhold">
+        <header class="projekt-hero">
+          <h2 class="projekt-titel">
+            Brugergrænsefladeudvikling &mdash;
+            <em>SOMNUS — et interaktivt myndighedssite om Drømlækagen</em>
+          </h2>
+        </header>
+
+        <!-- S1 Overblik -->
+        <section class="proces-afsnit proces-afsnit-enkelt" id="s1">
+          <div class="afsnit-hoejre afsnit-hoejre-bred">
+            <div class="citat-boks">
+              <p>"SOMNUS er designet til at føle sig som en portal ind i en historie. Nødsituationen er fiktiv, men interfacet skal få dig til at tro, at det er virkeligt."</p>
+            </div>
+           <p class="afsnit-tekst">
+SOMNUS er mit bud på et interaktivt myndighedssite, hvor grænsen mellem information og fortælling bliver udvisket. Udgangspunktet er en fiktiv krise — en såkaldt <b>Drømlækage</b>, hvor drømme og virkelighed overlapper. Sitets rolle er at formidle situationen som en officiel instans, samtidig med at brugerens oplevelse langsomt bliver mere usikker og “glitchy”.
+</p>
+
+<p class="afsnit-tekst">
+Jeg arbejdede med at skabe en samlet visuel identitet og et interface, der både føles funktionelt og urovækkende. Resultatet er et lille univers, hvor design, interaktion og fortælling smelter sammen.
+</p>
+            <div class="tags-liste">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Adobe Illustrator</span>
+              <span class="tag">SVG</span>
+              <span class="tag">Webformular</span>
+              <span class="tag">CSS custom properties</span>
+              <span class="tag">Dark mode</span>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Links/CTA -->
+        <div class="hurtig-links">
+          <a href="https://daria-projects.github.io/signal-lost/" class="hurtig-link fremhaevet" target="_blank" rel="noopener">↗ SOMNUS live site</a>
+          <a href="https://github.com/Daria-projects/signal-lost" class="hurtig-link" target="_blank" rel="noopener">↗ GitHub repository</a>
+          <a href="https://trello.com/invite/b/69c12cfb97d7b7c51208cf1b/ATTI8685aef15473b19dfc2faf6697f973ed86A84092/emergency-site" class="hurtig-link" target="_blank" rel="noopener">↗ Trello dokumentation</a>
+
+        </div>
+
+        <!-- S2 Opgaven -->
+        <section class="proces-afsnit" id="s2">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">01 / Hvad var opgaven?</span>
+            <h3 class="afsnit-overskrift">Fire uger — fire delopgaver</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">
+Opgaven tog udgangspunkt i et udleveret emergency site, som jeg skulle videreudvikle og transformere til mit eget fiktive univers. Jeg valgte at arbejde med idéen om en myndighed, der forsøger at håndtere en krise, som den ikke helt forstår — en “Drømlækage”.
+</p>
+
+<p class="afsnit-tekst">
+Projektet var opdelt i fire uger, hvor jeg gradvist byggede sitet op:
+</p>
+<ul class="tjekliste">
+  <li>Udvikling af interaktiv infografik i Illustrator og JavaScript</li>
+  <li>Design og kodning af webformular til symptomregistrering</li>
+  <li>Opbygning af en forsidestruktur med visuel identitet og dynamisk statusflow</li>
+  <li>Udvikling af mono mode som alternativt visuelt lag</li>
+</ul>
+           
+        </section>
+
+        <!-- S3 Proces -->
+        <section class="proces-afsnit" id="s3">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">02 / Proces</span>
+            <h3 class="afsnit-overskrift">Koncept → identitet → kode</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">
+Jeg startede med at definere SOMNUS som et system og ikke bare et website. Jeg arbejdede med idéen om en myndighed, der kommunikerer under pres, og som gradvist føles mere usikker i sin måde at formidle information på.
+</p>
+
+<p class="afsnit-tekst">
+Det betød, at jeg hele tiden arbejdede i spændingsfeltet mellem funktion og fortælling.
+</p>
+            <ul class="tjekliste">
+  <li>IBM Plex Mono valgte jeg for at understrege det systemiske og tekniske udtryk</li>
+  <li>Farverne blev bevidst holdt kølige og advarselsprægede for at skabe en latent uro</li>
+  <li>Infografikken blev bygget som et hybrid-element mellem illustration og interface</li>
+  <li>Jeg arbejdede med interaktioner, der ikke bare forklarer — men afslører information gradvist</li>
+  <li>Formularen blev designet som en “rolig flade” midt i kaosset</li>
+</ul>
+            <p class="afsnit-tekst">Til mono mode valgte jeg bevidst <em>ikke</em> et klassisk dark/light switch. I stedet skifter sitet til gråtoner — monokromt — for at bevare SOMNUS-universets alvor uden at bryde illusionen med et lyst og venligt interface.</p>
+            <div class="billede-boks">
+              <img src="img/img_04/somnus-infografik-illustrator.webp" alt="SOMNUS infografik — hoved med node-punkter tegnet i Adobe Illustrator" />
+            </div>
+          </div>
+        </section>
+
+        <!-- S4 Løsning -->
+        <section class="proces-afsnit" id="s4">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">03 / Løsning</span>
+            <h3 class="afsnit-overskrift">SOMNUS — tre sider, ét univers</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">
+SOMNUS endte som et lille sammenhængende univers bestående af tre sider, hvor brugeren bevæger sig gennem information, system og registrering. Målet var at få det til at føles som én samlet myndighedsoplevelse.
+</p>
+            <ul class="tjekliste">
+  <li>Forsiden fungerer som en levende statusflade med konstant bevægelse og signaler</li>
+  <li>Infografikken giver brugeren mulighed for at “afkode” krisen gennem interaktion</li>
+  <li>Registreringssiden bryder tempoet og skaber en mere kontrolleret, struktureret oplevelse</li>
+  <li>Mono mode tilføjer et alternativt visuelt lag, der ændrer stemningen uden at bryde universet</li>
+</ul>
+            <p class="afsnit-tekst">Efter peer feedback blev kontrast og læsbarhed forbedret: IBM Plex Mono fik bedre font-weights og letter-spacing, og alle tekstelementer møder nu WCAG AA-kravene (4.5:1 for normal tekst, 3:1 for stor tekst). Mono mode fik desuden en skarpere gråtoneskala.</p>
+            <div class="billede-boks">
+              <img src="img/img_04/somnus-screenshot.webp" alt="Screenshot af SOMNUS emergency site — forside" />
+            </div>
+          </div>
+        </section>
+
+        <!-- S5 Refleksion -->
+ <section class="proces-afsnit" id="s5">
+  <div class="afsnit-venstre">
+    <span class="afsnit-nummer">04 / Refleksion</span>
+    <h3 class="afsnit-overskrift">Læring</h3>
+  </div>
+
+  <div class="afsnit-hoejre">
+    <p class="afsnit-tekst">
+      Jeg brugte mest tid på det visuelle arbejde i Illustrator, fordi det var her, jeg havde størst kontrol over udtrykket. JavaScript-delen blev mere et funktionelt lag, hvor jeg fik hjælp undervejs til at få interaktionen til at fungere.
+    </p>
+
+    <p class="afsnit-tekst">
+      Efter feedback justerede jeg typografi, farver og forsiden, fordi udtrykket var blevet for intenst og gjorde sitet mindre let at aflæse.
+    </p>
+
+    <ul class="tjekliste">
+      <li>Illustration og visuel opbygning kræver mest iteration i starten</li>
+      <li>Interaktion skal støtte indholdet, ikke dominere det</li>
+      <li>Feedback er afgørende for at justere visuel balance</li>
+    </ul>
+
+    <div class="indsigt">
+      <span class="indsigt-label">Indsigt</span>
+      <p class="indsigt-tekst">
+        Jeg lærte, at et stærkt visuelt udtryk skal justeres, så det ikke går ud over læsbarhed og balance i interfacet.
+      </p>
+    </div>
+  </div>
+</section>
+
+        <nav class="projekt-nav">
+          <span class="pnav"><a href="t3-ux.html">← 03 — Grundlæggende UX/UI</a></span>
+          <span class="pnav"><a href="t5-indhold.html">05 — Grundlæggende indhold →</a></span>
+        </nav>
+      </main>
+
+      <!-- Nav SIDEBAR -->
+      <aside class="sidebar">
+        <a href="index.html" class="sidebar-tilbage">← &nbsp;1. semester</a>
+        <nav class="sidebar-sek-wrap" aria-label="Indholdsfortegnelse">
+          <p class="sidebar-sek-label">På denne side</p>
+          <button class="sidebar-sek-punkt aktiv" data-maal="s1"><span class="sek-nr">00</span><span class="sek-label">Overblik</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s2"><span class="sek-nr">01</span><span class="sek-label">Opgaven</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s3"><span class="sek-nr">02</span><span class="sek-label">Proces</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s4"><span class="sek-nr">03</span><span class="sek-label">Løsning</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s5"><span class="sek-nr">04</span><span class="sek-label">Refleksion</span></button>
+        </nav>
+        <nav aria-label="Temanavigation">
+          <a href="t1-introuge.html" class="side-punkt side-moerk">
+            <div class="side-bg t1-bg"></div>
+            <div class="side-indre"><p class="side-titel">Tema 01 &mdash; <em>Introuge</em></p></div>
+          </a>
+          <a href="t2-web.html" class="side-punkt side-moerk">
+            <div class="side-bg t2-bg"></div>
+            <div class="side-indre"><p class="side-titel">Tema 02 &mdash; <em>Grundlæggende web</em></p></div>
+          </a>
+          <a href="t3-ux.html" class="side-punkt side-moerk">
+            <div class="side-bg t3-bg"></div>
+            <div class="side-indre"><p class="side-titel">Tema 03 &mdash; <em>Grundlæggende UX/UI</em></p></div>
+          </a>
+          <a href="t4-ui.html" class="side-punkt side-moerk aktiv" aria-current="page">
+            <div class="side-bg t4-bg"></div>
+            <div class="side-indre"><p class="side-titel">Tema 04 &mdash; <em>Brugergrænseflader</em></p></div>
+          </a>
+          <a href="t5-indhold.html" class="side-punkt side-moerk">
+            <div class="side-bg t5-bg"></div>
+            <div class="side-indre"><p class="side-titel">Tema 05 &mdash; <em>Grundlæggende indhold</em></p></div>
+          </a>
+          <a href="t6-portfolio.html" class="side-punkt side-moerk">
+            <div class="side-bg t6-bg"></div>
+            <div class="side-indre"><p class="side-titel">Tema 06 &mdash; <em>Portfolio-eksamen</em></p></div>
+          </a>
+        </nav>
+      </aside>
+    </div>
+
+    <footer>
+      <span class="footer-tekst">Daria Novikova &middot; Multimediedesign &middot; EK</span>
+      <span class="footer-tekst">Portfolio — 1. semester</span>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/tema.js"></script>
+  </body>
+</html>

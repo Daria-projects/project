@@ -1,0 +1,52 @@
+<!-- ═══════════════════════════════════════════════════════
+     FAVICON IMPLEMENTATION — Daria Novikova Portfolio
+     Paste this into the <head> of ALL pages (index, om-mig, t1–t6)
+     Folder: /favicons/ relative to your HTML files
+     ═══════════════════════════════════════════════════════ -->
+
+<!-- Standard favicon -->
+<link rel="icon" type="image/x-icon" href="favicons/favicon-dark.ico">
+
+<!-- SVG favicon (modern browsers — auto dark/light via media query) -->
+<link rel="icon" type="image/svg+xml" href="favicons/favicon-dark.svg"
+      media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="favicons/favicon-light.svg"
+      media="(prefers-color-scheme: dark)">
+
+<!-- PNG fallbacks -->
+<link rel="icon" type="image/png" sizes="32x32"  href="favicons/favicon-dark-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16"  href="favicons/favicon-dark-16x16.png">
+
+<!-- Apple Touch Icon (iOS home screen, 180px) -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-dark.png">
+
+<!-- Android / PWA -->
+<link rel="icon" type="image/png" sizes="192x192" href="favicons/favicon-dark-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicons/favicon-dark-512x512.png">
+
+<!-- ═══════════════════════════════════════════════════════
+     FILE REFERENCE — what each file is for
+     ═══════════════════════════════════════════════════════
+
+  favicon-dark.svg          → dark circle + white mark (SVG, scalable)
+  favicon-light.svg         → cream circle + dark mark (SVG, scalable)
+  favicon-dark-transparent.svg  → no circle, white mark on transparent bg
+  favicon-light-transparent.svg → no circle, dark mark on transparent bg
+
+  favicon-dark.ico          → dark, multi-size (16/32/48px) for browser tab
+  favicon-light.ico         → light, multi-size
+
+  PNG sizes (both dark + light):
+  16×16    → browser tab (small)
+  32×32    → browser tab (retina)
+  48×48    → Windows taskbar
+  64×64    → general purpose
+  128×128  → Chrome Web Store, macOS
+  180×180  → Apple Touch Icon (iOS home screen)
+  192×192  → Android home screen / PWA
+  512×512  → PWA splash screen, Google Play
+
+  apple-touch-icon-dark.png  → iOS Safari home screen (180px, dark)
+  apple-touch-icon-light.png → iOS Safari home screen (180px, light)
+
+  ═══════════════════════════════════════════════════════ -->

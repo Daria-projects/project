@@ -1,0 +1,16 @@
+# Dependency folders (never upload these, they can be re-installed via terminal)
+node_modules/
+jspm_packages/
+
+# Local environment variables / Secrets (CRITICAL for security)
+.env
+.env.local
+*.env
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Build outputs (optional, usually generated automatically)
+dist/
+build/

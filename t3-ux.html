@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T3 Grundlæggende UX/UI — Daria Novikova</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tema-base.css" />
+    <link rel="stylesheet" href="css/t3.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicons/favicon-dark.ico" />
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon-dark.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon-light.svg" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-dark-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-dark-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-dark.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/favicon-dark-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicons/favicon-dark-512x512.png" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="top-nav" aria-label="Sidenavigation">
+      <a href="index.html" class="nav-logo" aria-label="Gå til startside">
+        <span class="nav-logo-default" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 85.46 85.46" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42.73" cy="42.73" r="42.73" fill="#0d0d0b" />
+            <path
+              d="M33.98,59.08h16.02v6.83c0,1.58-.33,2.92-1,4.02s-1.6,1.93-2.8,2.5c-1.2.57-2.61.86-4.22.86-1.19,0-2.27-.16-3.26-.48s-1.83-.8-2.54-1.43-1.25-1.4-1.63-2.32c-.38-.92-.57-1.97-.57-3.15v-6.83ZM36.9,62.5v2.83c0,.64.09,1.24.26,1.78s.46,1.01.86,1.41.92.7,1.58.92,1.47.33,2.44.33c1.26,0,2.26-.19,2.99-.56.73-.37,1.26-.89,1.58-1.56.32-.67.48-1.44.48-2.32v-2.83h-10.2Z"
+              fill="#fafafa"
+            />
+            <path d="M21.73,35.25l-5.18-1.72v3.56l3.3,1.02v6.35l-3.3,1.02v3.56l16.02-5.31v-4.88l-10.84-3.6ZM29.98,41.38l-2.07.59-5.42,1.67v-4.71l5.42,1.68,2.07.61v.16Z" fill="#fafafa" />
+            <path
+              d="M44.59,21.53c.16-.36.4-.6.71-.74.31-.14.69-.21,1.14-.21h2.05c.38,0,.73-.02,1.05-.05.32-.04.58-.1.77-.19v-3.45c-.31.13-.62.21-.92.23-.31.02-.61.03-.9.03h-2.64c-.6,0-1.11.09-1.53.27-.42.17-.76.45-1.03.84-.27.39-.46.89-.56,1.51h-.13c-.25-.91-.72-1.63-1.4-2.16-.68-.52-1.52-.79-2.51-.79-.59,0-1.12.08-1.59.24-.47.17-.88.4-1.23.7-.35.3-.64.66-.88,1.1-.23.43-.41.91-.52,1.46-.12.54-.18,1.14-.18,1.8v8.15h16.02v-3.43h-5.98v-3.8c0-.66.09-1.16.26-1.51ZM37.13,26.84v-3.93c0-.38.04-.73.12-1.03.08-.31.21-.58.38-.82.18-.23.4-.41.67-.53.27-.13.61-.19,1.02-.19.66,0,1.21.2,1.65.59.44.4.66,1.06.66,1.98v3.93h-4.5Z"
+              fill="#fafafa"
+            />
+            <path d="M40.09,53.85v-16.02h3.43v16.02h-3.43Z" fill="#fafafa" />
+            <path d="M67.17,37.01v-3.56l-16.02,5.31v4.88l16.02,5.32v-3.56l-3.3-1.02v-6.35l3.3-1.02ZM61.24,43.56l-5.43-1.68-2.07-.61v-.16l2.07-.59,5.43-1.68v4.72Z" fill="#fafafa" />
+          </svg>
+        </span>
+        <span class="nav-logo-hover" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 85.46 85.46" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42.73" cy="42.73" r="42.73" fill="#ffefae" />
+            <path
+              d="M33.98,59.08h16.02v6.83c0,1.58-.33,2.92-1,4.02s-1.6,1.93-2.8,2.5c-1.2.57-2.61.86-4.22.86-1.19,0-2.27-.16-3.26-.48s-1.83-.8-2.54-1.43-1.25-1.4-1.63-2.32c-.38-.92-.57-1.97-.57-3.15v-6.83ZM36.9,62.5v2.83c0,.64.09,1.24.26,1.78s.46,1.01.86,1.41.92.7,1.58.92,1.47.33,2.44.33c1.26,0,2.26-.19,2.99-.56.73-.37,1.26-.89,1.58-1.56.32-.67.48-1.44.48-2.32v-2.83h-10.2Z"
+              fill="#0d0d0b"
+            />
+            <path d="M21.73,35.25l-5.18-1.72v3.56l3.3,1.02v6.35l-3.3,1.02v3.56l16.02-5.31v-4.88l-10.84-3.6ZM29.98,41.38l-2.07.59-5.42,1.67v-4.71l5.42,1.68,2.07.61v.16Z" fill="#0d0d0b" />
+            <path
+              d="M44.59,21.53c.16-.36.4-.6.71-.74.31-.14.69-.21,1.14-.21h2.05c.38,0,.73-.02,1.05-.05.32-.04.58-.1.77-.19v-3.45c-.31.13-.62.21-.92.23-.31.02-.61.03-.9.03h-2.64c-.6,0-1.11.09-1.53.27-.42.17-.76.45-1.03.84-.27.39-.46.89-.56,1.51h-.13c-.25-.91-.72-1.63-1.4-2.16-.68-.52-1.52-.79-2.51-.79-.59,0-1.12.08-1.59.24-.47.17-.88.4-1.23.7-.35.3-.64.66-.88,1.1-.23.43-.41.91-.52,1.46-.12.54-.18,1.14-.18,1.8v8.15h16.02v-3.43h-5.98v-3.8c0-.66.09-1.16.26-1.51ZM37.13,26.84v-3.93c0-.38.04-.73.12-1.03.08-.31.21-.58.38-.82.18-.23.4-.41.67-.53.27-.13.61-.19,1.02-.19.66,0,1.21.2,1.65.59.44.4.66,1.06.66,1.98v3.93h-4.5Z"
+              fill="#0d0d0b"
+            />
+            <path d="M40.09,53.85v-16.02h3.43v16.02h-3.43Z" fill="#0d0d0b" />
+            <path d="M67.17,37.01v-3.56l-16.02,5.31v4.88l16.02,5.32v-3.56l-3.3-1.02v-6.35l3.3-1.02ZM61.24,43.56l-5.43-1.68-2.07-.61v-.16l2.07-.59,5.43-1.68v4.72Z" fill="#0d0d0b" />
+          </svg>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#projekter" class="aktiv">Projekter</a></li>
+        <li><a href="om-mig.html">Om mig</a></li>
+        <li><a href="index.html#refleksion">Refleksion</a></li>
+      </ul>
+      <button type="button" class="burger-knap" aria-label="Åbn menu" aria-expanded="false" aria-controls="mobil-menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <!-- Mobil menu -->
+    <ul class="mobil-menu" id="mobil-menu">
+      <li><a href="index.html#projekter" class="aktiv">Projekter</a></li>
+      <li><a href="om-mig.html">Om mig</a></li>
+      <li><a href="index.html#refleksion">Refleksion</a></li>
+    </ul>
+
+    <!-- Projekt Layout Container -->
+    <div class="projekt-layout">
+      <nav class="mobil-sek-nav">
+        <a href="#s1">Overblik</a>
+        <a href="#s2">Opgaven</a>
+        <a href="#s3">Processen</a>
+        <a href="#s3b">Brugertest</a>
+        <a href="#s4">Min løsning</a>
+        <a href="#s5">Hvad lærte jeg?</a>
+      </nav>
+
+      <main class="projekt-indhold" id="hoved-indhold">
+        <header class="projekt-hero">
+          <h2 class="projekt-titel">
+            Grundlæggende UX/UI &mdash;
+            <em>The Anatomy of Taste — emnesite om æstetisk selvforståelse</em>
+          </h2>
+        </header>
+
+        <!-- S1 Overblik -->
+        <section class="proces-afsnit proces-afsnit-enkelt" id="s1">
+          <div class="afsnit-hoejre afsnit-hoejre-bred">
+            <div class="citat-boks">
+              <p>"De fleste designere kan lave noget der ser rigtigt ud. Færre kan forklare hvorfor. The Anatomy of Taste er et forsøg på at bygge det instrument jeg selv har savnet."</p>
+            </div>
+            <p class="afsnit-tekst">
+              Over fire uger udviklede jeg konceptet og designet til <b>The Anatomy of Taste</b> — et digitalt værktøj til æstetisk beslutningstagning, der hjælper designere med at forstå, forklare og udvikle deres egne visuelle valg. Jeg valgte
+              emnet fordi jeg havde brug for det selv.
+            </p>
+            <p class="afsnit-tekst">
+              Projektet nåede ikke til kode. Jeg gik for dybt ind i researchfasen, tabte overblikket over MVP og endte udbrændt med et stærkt koncept, en gennemarbejdet hi-fi prototype — og ingen implementering. Det er den ærlige version.
+            </p>
+            <div class="tags-liste">
+              <span class="tag">Desk research</span>
+              <span class="tag">Concurrent research</span>
+              <span class="tag">Fokusgruppe</span>
+              <span class="tag">Figma lo-fi</span>
+              <span class="tag">Figma hi-fi</span>
+              <span class="tag">Brugertest</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Links/CTA -->
+        <div class="hurtig-links">
+          <a href="https://www.figma.com/design/pRlJ0e1J5g0vTKIjsjDNYV/EMNESITE-Aflevering?node-id=2367-6003&t=6fusDN1NNAxiBTxa-1" class="hurtig-link" target="_blank" rel="noopener">↗ Figma aflevering</a>
+          <a
+            href="https://www.figma.com/proto/pRlJ0e1J5g0vTKIjsjDNYV/EMNESITE-Aflevering?node-id=2367-6003&t=K9qp6bHaSm0q3PPf-1&scaling=min-zoom&content-scaling=fixed&page-id=2283%3A640&starting-point-node-id=2367%3A6003&show-proto-sidebar=1"
+            class="hurtig-link"
+            target="_blank"
+            rel="noopener"
+            >↗ Figma prototype</a
+          >
+          <a href="https://www.figma.com/deck/s4KNQkxx6IXpNjMJIXsHRQ/The-Anatomy-of-Taste-%E2%80%94Presentation?node-id=9-68&t=3Tf90YTamu1saaIp-1" class="hurtig-link" target="_blank" rel="noopener">↗ Præsentation</a>
+        </div>
+
+        <!-- S2 Opgaven -->
+        <section class="proces-afsnit" id="s2">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">01 / Hvad var opgaven?</span>
+            <h3 class="afsnit-overskrift">Fire uger — emnesite fra idé til aflevering</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">Opgaven var at designe og udvikle et emnesite om et selvvalgt emne over fire uger — fra research og idéudvikling til færdigt, kodet site med brugertest og procesdokumentation.</p>
+            <ul class="tjekliste">
+              <li><b>Desk research</b> — litteraturstudie og concurrent analysis af eksisterende løsninger</li>
+              <li><b>Brugerdefinition</b> — typologimatrix, brugertyper og user stories</li>
+              <li><b>Lo-fi og hi-fi prototype</b> i Figma</li>
+              <li><b>Fokusgruppe og brugertest</b> med iteration på baggrund af feedback</li>
+              <li><b>Kodning og deployment</b> — det trin jeg ikke nåede</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- S3 Proces -->
+        <section class="proces-afsnit" id="s3">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">02 / Proces</span>
+            <h3 class="afsnit-overskrift">Idé → lo-fi → hi-fi → udbrændthed</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">
+              Jeg valgte et emne tæt på min faglige baggrund — æstetisk selvforståelse hos designere — og gik straks dybt ind i research. For dybt. Jeg lavede en concurrent analysis af seks produkter (Pinterest, Are.na, Savee.it, 16Personalities,
+              Behance, Spotify Wrapped), udviklede en typologimatrix med fem brugertyper og skrev 18+ user stories fordelt på tre brugerroller.
+            </p>
+            <p class="afsnit-tekst">
+              Researchfasen var grundig og gav et stærkt fundament — men den tog for lang tid. Jeg var fascineret af problemrummet og holdt fast i kompleksiteten, da jeg burde have skåret det ned. Da jeg endelig nåede til lo-fi og hi-fi i Figma, var
+              der ingen tid tilbage til kode.
+            </p>
+            <ul class="tjekliste">
+              <li>Desk research 1: competitive analysis — 6 produkter på 3 parametre</li>
+              <li>Desk research 2: litteraturstudie — visual cognition, æstetikteori, design identity</li>
+              <li>5 brugertyper i typologimatrix plottet på to akser: intuitiv/analytisk smag × lav/høj reflektion</li>
+              <li>18+ user stories fordelt på studerende, designere og undervisere</li>
+              <li>Lo-fi wireframes → hi-fi prototype i Figma med Sand/Glass/Mirror-metafor som visuelt fundament</li>
+            </ul>
+            <div class="billede-boks">
+              <img src="img/img_03/Typology Matrix.svg" alt="Målegruppe" />
+            </div>
+          </div>
+        </section>
+
+        <!-- S3b Brugertest -->
+        <section class="proces-afsnit" id="s3b">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">02b / Brugertest</span>
+            <h3 class="afsnit-overskrift">Fokusgruppe og test</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">
+              Jeg gennemførte en fokusgruppe med designstuderende og testede prototypen kvalitativt. Resultaterne var klare: konceptet resonerede, men onboardingen fejlede. Brugerne forstod <em>hvad</em> platformen handlede om — men ikke
+              <em>hvad de skulle gøre</em> med det.
+            </p>
+            <p class="afsnit-tekst">To citater fra fokusgruppen ramte kernen:</p>
+            <div class="citat-boks">
+              <p>"Jeg ved godt hvad jeg kan lide, men når jeg skal forklare det til min vejleder lyder det altid tomt. Jeg mangler ord."</p>
+            </div>
+            <div class="citat-boks">
+              <p>"Det må ikke føles som en test. Hvis det føles som om der er et rigtigt svar, mister det sin troværdighed."</p>
+            </div>
+            <p class="afsnit-tekst">
+              Styletile-testen validerede den visuelle retning — Structure B scorede 4.2/5. De kvalitative interviews informerede direkte de endelige justeringer af flowet. Men iterationerne kom for sent til at nå implementering.
+            </p>
+          </div>
+        </section>
+
+        <!-- S4 Løsning -->
+        <section class="proces-afsnit" id="s4">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">03 / Løsning</span>
+            <h3 class="afsnit-overskrift">Prototype — ikke et kodet site</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">Afleveringen var en hi-fi Figma-prototype og en præsentation — ikke et kodet site. Det er vigtigt at sige direkte, fordi opgaven krævede begge dele.</p>
+            <p class="afsnit-tekst">
+              Prototypen demonstrerer det interaktive flow: brugeren gennemgår en serie visuelle valg og modtager en personlig Taste Profile. Den visuelle identitet er baseret på en Sand/Glass/Mirror-metafor — monospace og serif typografi kombineret
+              for at balancere det tekniske og det humanistiske, med et dark color scheme der understøtter den introspektive stemning.
+            </p>
+            <ul class="tjekliste">
+              <li>Hi-fi prototype i Figma med fuldt interaktivt flow</li>
+              <li>Taste Profile-output baseret på brugerens valg</li>
+              <li>Procesdokumentation med research, wireframes, testresultater og iterationsnotater</li>
+              <li>Præsentation med problem statement, competitive gap og konceptbegrundelse</li>
+            </ul>
+            <div class="billede-boks">
+              <img src="img/img_03/Figma Hi-fi prototype.svg" alt="Hi-fi prototype af The Anatomy of Taste — Figma" />
+            </div>
+          </div>
+        </section>
+
+        <!-- S5 Refleksion -->
+        <section class="proces-afsnit" id="s5">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">04 / Refleksion</span>
+            <h3 class="afsnit-overskrift">Læring</h3>
+          </div>
+
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">
+              T3 var det tema, hvor afstanden mellem det jeg ville lave og det jeg nåede at lave var størst. Konceptet var ambitiøst — måske for ambitiøst til fire uger — og jeg brugte for lang tid på at beskytte idéen i stedet for at reducere den
+              tidligt nok.
+            </p>
+
+            <p class="afsnit-tekst">Brugertesten afslørede noget konkret: folk forstod <em>emnet</em>, men ikke <em>hvad de skulle gøre</em>. Det er ikke et nichedesignproblem — det er onboarding. Og det burde jeg have testet i uge 1, ikke uge 3.</p>
+
+            <ul class="tjekliste">
+              <li>Et komplekst koncept kræver endnu tydeligere onboarding end et simpelt</li>
+              <li>Jo mere du holder fast i en idé, jo dyrere er det at skære i den til sidst</li>
+              <li>Styletile-test og fokusgruppe-citater gav mere præcis retning end mine egne præferencer alene</li>
+            </ul>
+
+            <div class="indsigt">
+              <span class="indsigt-label">Indsigt</span>
+              <p class="indsigt-tekst">Det færdige site er en brøkdel af det jeg ville have lavet. Det er frustrerende — og det er præcis den frustration der gør en til en bedre designer, hvis man lytter til den i stedet for at skjule den.</p>
+            </div>
+          </div>
+        </section>
+
+        <nav class="projekt-nav">
+          <span class="pnav"><a href="t2-web.html">← 02 — Grundlæggende web</a></span>
+          <span class="pnav"><a href="t4-ui.html">04 — Brugergrænsefladeudvikling →</a></span>
+        </nav>
+      </main>
+
+      <!-- Nav SIDEBAR -->
+      <aside class="sidebar">
+        <a href="index.html" class="sidebar-tilbage">← &nbsp;1. semester</a>
+        <nav class="sidebar-sek-wrap" aria-label="Indholdsfortegnelse">
+          <p class="sidebar-sek-label">På denne side</p>
+          <button class="sidebar-sek-punkt aktiv" data-maal="s1"><span class="sek-nr">00</span><span class="sek-label">Overblik</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s2"><span class="sek-nr">01</span><span class="sek-label">Opgaven</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s3"><span class="sek-nr">02</span><span class="sek-label">Proces</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s3b"><span class="sek-nr">02b</span><span class="sek-label">Brugertest</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s4"><span class="sek-nr">03</span><span class="sek-label">Løsning</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s5"><span class="sek-nr">04</span><span class="sek-label">Refleksion</span></button>
+        </nav>
+        <nav aria-label="Temanavigation">
+          <a href="t1-introuge.html" class="side-punkt side-moerk">
+            <div class="side-bg t1-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 01 &mdash; <em>Introuge</em></p>
+            </div>
+          </a>
+          <a href="t2-web.html" class="side-punkt side-moerk">
+            <div class="side-bg t2-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 02 &mdash; <em>Grundlæggende web</em></p>
+            </div>
+          </a>
+          <a href="t3-ux.html" class="side-punkt side-moerk aktiv" aria-current="page">
+            <div class="side-bg t3-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 03 &mdash; <em>Grundlæggende UX/UI</em></p>
+            </div>
+          </a>
+          <a href="t4-ui.html" class="side-punkt side-moerk">
+            <div class="side-bg t4-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 04 &mdash; <em>Brugergrænseflader</em></p>
+            </div>
+          </a>
+          <a href="t5-indhold.html" class="side-punkt side-moerk">
+            <div class="side-bg t5-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 05 &mdash; <em>Grundlæggende indhold</em></p>
+            </div>
+          </a>
+          <a href="t6-portfolio.html" class="side-punkt side-moerk">
+            <div class="side-bg t6-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 06 &mdash; <em>Portfolio-eksamen</em></p>
+            </div>
+          </a>
+        </nav>
+      </aside>
+    </div>
+
+    <footer>
+      <span class="footer-tekst">Daria Novikova &middot; Multimediedesign &middot; EK</span>
+      <span class="footer-tekst">Portfolio — 1. semester</span>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/tema.js"></script>
+  </body>
+</html>

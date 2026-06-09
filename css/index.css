@@ -1,0 +1,861 @@
+/*  HERO  */
+/* H1 row: luft fra nav */
+.hero {
+  animation: fadeop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Every hero row: full bleed, padding, border-bottom */
+.hero-row {
+  padding: 0 var(--gap);
+  border-bottom: 1px solid var(--kant);
+}
+
+.hero-row-kicker {
+  padding-top: 28px;
+  padding-bottom: 16px;
+}
+
+.hero-row-navn {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.hero-row-bio {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero-row-tags {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-row-nav {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0;
+}
+
+.hero-row-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-overtekst {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sten);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-overtekst::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--sten);
+  flex-shrink: 0;
+}
+
+.hero-titel {
+  font-family: var(--serif);
+  font-size: clamp(56px, 16vw, 130px);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.hero-titel em {
+  font-style: oblique 10deg;
+  font-weight: 700;
+  display: block;
+}
+
+.hero-undertitel {
+  display: block;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sten);
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+.hero-bio-etiket {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sten);
+  margin-bottom: 8px;
+}
+
+.hero-bio-tekst {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.72;
+  color: #333;
+}
+
+.hero-om-knap {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--papir);
+  background: var(--sort);
+  border: 0.5px solid var(--sort);
+  padding: 9px 16px;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.hero-om-knap:hover,
+.hero-om-knap:focus {
+  background: #2a2a27;
+  border-color: #2a2a27;
+  color: var(--papir);
+}
+
+.hero-om-knap:active {
+  background: var(--t6);
+  border-color: var(--t6);
+  color: var(--sort);
+}
+
+.hero-nav-link {
+  font-family: var(--serif);
+  font-size: clamp(20px, 5vw, 38px);
+  font-weight: 700;
+  font-style: oblique 10deg;
+  color: var(--sten);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 14px clamp(14px, 3vw, 24px);
+  transition:
+    color var(--trans),
+    background var(--trans);
+}
+
+.hero-nav-link:hover,
+.hero-nav-link:focus {
+  outline: none;
+  color: var(--sort);
+}
+
+.hero-nav-link[data-tema="t1"]:is(:hover, :focus) {
+  background: var(--t1);
+}
+.hero-nav-link[data-tema="t2"]:is(:hover, :focus) {
+  background: var(--t2);
+}
+.hero-nav-link[data-tema="t3"]:is(:hover, :focus) {
+  background: var(--t3);
+}
+.hero-nav-link[data-tema="t4"]:is(:hover, :focus) {
+  background: var(--t4);
+}
+.hero-nav-link[data-tema="t5"]:is(:hover, :focus) {
+  background: var(--t5);
+}
+.hero-nav-link[data-tema="t6"]:is(:hover, :focus) {
+  background: var(--t6);
+}
+
+/* REFLEKSION — hver row er en blok */
+
+.ref-row {
+  padding: 24px var(--gap);
+  border-bottom: 1px solid var(--kant);
+}
+
+.ref-stor-h {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(40px, 12vw, 80px);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.ref-intro {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.76;
+  color: #444;
+}
+
+.ref-celler {
+  display: flex;
+  flex-direction: column;
+}
+
+.ref-celle {
+  padding: 20px var(--gap);
+  border-bottom: 1px solid var(--kant);
+}
+
+.ref-celle:last-child {
+  border-bottom: none;
+}
+
+.ref-celle-etiket {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sten);
+  margin-bottom: 7px;
+}
+
+.ref-celle-tekst {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.68;
+  color: #444;
+}
+
+/* PROJEKTKORT — FORSIDE */
+
+.projekt-gitter {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Dekorative foto-celler: skjult på mobil */
+.foto-celle {
+  display: none;
+  aspect-ratio: 1 / 1;
+}
+
+.kort {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  display: block;
+  opacity: 0;
+  animation: indfad 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  aspect-ratio: 1 / 1;
+}
+
+.projekt-gitter > *:nth-child(1) {
+  animation-delay: 0.04s;
+}
+.projekt-gitter > *:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.projekt-gitter > *:nth-child(3) {
+  animation-delay: 0.12s;
+}
+.projekt-gitter > *:nth-child(4) {
+  animation-delay: 0.16s;
+}
+.projekt-gitter > *:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.projekt-gitter > *:nth-child(6) {
+  animation-delay: 0.24s;
+}
+
+.kort-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 0;
+  transition: border-radius 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.kort:hover .kort-bg,
+.kort:focus .kort-bg {
+  border-radius: 50%;
+}
+
+.kort-indre {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 20px var(--gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 0.28s ease;
+}
+
+.kort:hover .kort-indre,
+.kort:focus .kort-indre {
+  opacity: 0;
+}
+
+.kort-type {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.kort-nummer {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.kort-titel {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(18px, 5vw, 26px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.kort-titel em {
+  font-style: oblique 10deg;
+  display: block;
+}
+
+.kort-meta {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+
+/* Lys tekst (hvid) */
+.lys .kort-type,
+.lys .kort-titel {
+  color: #fff;
+}
+
+.lys .kort-meta,
+.lys .kort-nummer {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mørk tekst (sort) */
+.moerk .kort-type,
+.moerk .kort-titel {
+  color: var(--sort);
+}
+
+.moerk .kort-meta,
+.moerk .kort-nummer {
+  color: var(--sort);
+}
+
+/* Pil der vises ved hover */
+.kort-enter {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.22s ease 0.16s;
+}
+
+.kort-enter span {
+  font-family: var(--serif);
+  font-size: clamp(28px, 6vw, 42px);
+  font-weight: 700;
+  color: #fff;
+  transform: translateY(6px);
+  transition: transform 0.22s ease 0.16s;
+}
+
+.moerk .kort-enter span {
+  color: var(--sort);
+}
+
+.kort:hover .kort-enter,
+.kort:focus .kort-enter {
+  opacity: 1;
+}
+
+.kort:hover .kort-enter span,
+.kort:focus .kort-enter span {
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FORSIDE — OM MIG STRIP
+   Slim chapter — bio + tags + link. No repeated name heading.
+   ═══════════════════════════════════════════════════════════ */
+
+.vaerktoej-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vaerktoej-tag {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.07em;
+  padding: 4px 9px;
+  border: 0.5px solid var(--kant-tyk);
+  border-radius: var(--radius);
+  color: var(--sten);
+}
+
+@media (min-width: 600px) {
+  .hero-row-tags {
+    flex-wrap: nowrap;
+  }
+
+  .ref-celler {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ref-celle {
+    border-right: 1px solid var(--kant);
+    border-bottom: 1px solid var(--kant);
+  }
+
+  .ref-celle:nth-child(2n) {
+    border-right: none;
+  }
+
+  .ref-celle:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .projekt-gitter {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .foto-celle {
+    display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .projekt-gitter {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   INDEX.CSS — Daria Novikova Portfolio
+   Single authoritative file. No duplicate rules.
+   ══════════════════════════════════════════════════════════ */
+
+html {
+  overflow-x: hidden;
+}
+body > * {
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ── HERO ───────────────────────────────────────────────── */
+
+.hero-undertitel {
+  display: none;
+}
+.hero-row-tags {
+  display: none;
+}
+
+/* H1 row: clear breathing room from nav */
+.hero-row-navn {
+  border-bottom: none;
+  padding-top: calc(var(--gap) * 2);
+  padding-bottom: calc(var(--gap) * 1.5);
+}
+
+/* Tagline row: 2/3 content, 1/3 empty */
+.hero-row-tagline {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-bottom: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero-tagline {
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--sort);
+  grid-column: 1;
+}
+
+/* Bio row: 2/3 content, 1/3 empty, closes hero with border */
+.hero-row-bio {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  padding-top: calc(var(--gap) * 1);
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--kant);
+}
+
+.hero-bio-indhold {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-row-bio .hero-bio-tekst {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.hero-row-bio .hero-om-knap {
+  margin-top: calc(var(--gap) * 1);
+  margin-bottom: calc(var(--gap) * 1.5);
+}
+
+@media (max-width: 600px) {
+  .hero-row-tagline {
+    grid-template-columns: 1fr;
+  }
+  .hero-row-bio {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── SECTION HEADERS ────────────────────────────────────── */
+
+.sektion-tekst {
+  font-size: 13px;
+}
+
+/* Unified section opener: same for Projekter and Refleksion */
+.sek-overskrift-row {
+  padding: calc(var(--gap) * 1.5) var(--gap);
+  border-bottom: 1px solid var(--kant);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sek-stor-h,
+.ref-stor-h {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--sort);
+}
+
+/* ── CARDS ──────────────────────────────────────────────── */
+
+.kort-indre {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  padding: 20px var(--gap);
+  box-sizing: border-box;
+}
+
+.kort-indre > div:first-child {
+  align-self: start;
+}
+
+.kort-type {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0d0d0b;
+  font-weight: 600;
+}
+
+.kort-titel {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(22px, 3.5vw, 36px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: var(--sort);
+}
+
+.kort-titel em {
+  font-style: normal;
+  display: inline;
+}
+
+.kort-pil {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 0.8em;
+  color: var(--sort);
+  display: inline-block;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.kort:hover .kort-pil {
+  transform: translateX(4px);
+}
+
+.kort-meta {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #0d0d0b;
+  font-weight: 500;
+  align-self: end;
+}
+
+/* Mobile: arrow always visible */
+@media (hover: none) {
+  .kort-pil {
+    opacity: 1;
+  }
+}
+
+/* ── REFLEKSION ─────────────────────────────────────────── */
+
+.ref-row {
+  padding: 0;
+  border-bottom: none;
+}
+
+#refleksion {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ref-intro-row {
+  display: none;
+}
+.ref-intro-tekst {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--sten);
+  width: 100%;
+}
+
+.ref-kategori {
+  display: block;
+  border-bottom: 1px solid var(--kant);
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ref-kategori-last {
+  border-bottom: none;
+}
+
+.ref-kat-header {
+  padding: var(--gap) var(--gap) calc(var(--gap) * 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ref-kat-nr {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--sten);
+}
+
+.ref-kat-titel {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(22px, 2vw, 36px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  color: var(--sort);
+}
+
+.ref-kat-titel em {
+  font-style: oblique 10deg;
+  font-weight: 700;
+  display: block;
+}
+
+.ref-kat-tekst {
+  padding: calc(var(--gap) * 0.5) var(--gap) var(--gap);
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.ref-kat-tekst p {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.78;
+  color: #333;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 640px) {
+  .ref-kategori {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    width: 100%;
+  }
+
+  .ref-kat-header {
+    min-width: 0;
+    padding: var(--gap);
+    border-right: 1px solid var(--kant);
+    align-self: stretch;
+    overflow: hidden;
+  }
+
+  .ref-kat-tekst {
+    min-width: 0;
+    padding: var(--gap);
+    overflow: hidden;
+  }
+}
+
+/* ── GLOBAL TYPOGRAPHY FLOOR ────────────────────────────── */
+
+.projekt-kicker {
+  font-size: 13px;
+}
+.meta-etiket {
+  font-size: 13px;
+}
+.meta-vaerdi {
+  font-size: 14px;
+}
+.hurtig-link {
+  font-size: 13px;
+}
+.afsnit-nummer {
+  font-size: 13px;
+}
+.afsnit-tekst {
+  font-size: 16px;
+}
+.indsigt-label {
+  font-size: 13px;
+}
+.indsigt-tekst {
+  font-size: 14px;
+}
+.tag {
+  font-size: 13px;
+}
+.pgk-nr {
+  font-size: 13px;
+}
+.pgk-bund {
+  font-size: 14px;
+}
+.dim-navn {
+  font-size: 13px;
+}
+.dim-vaerdi {
+  font-size: 13px;
+}
+.tjekliste li {
+  font-size: 15px;
+}
+.pnav {
+  font-size: 13px;
+}
+.sidebar-tilbage {
+  font-size: 13px;
+}
+.sidebar-sek-label {
+  font-size: 13px;
+}
+.sek-nr {
+  font-size: 13px;
+}
+.sek-label {
+  font-size: 14px;
+}
+.om-mig-overtekst {
+  font-size: 13px;
+}
+.om-mig-beskrivelse {
+  font-size: 16px;
+}
+.cv-aar {
+  font-size: 13px;
+}
+.cv-tekst {
+  font-size: 15px;
+}
+.sem-tekst {
+  font-size: 16px;
+}
+.mobil-sek-nav a {
+  font-size: 13px;
+}
+.billede-pladsholder {
+  font-size: 13px;
+}
+.portræt-pladsholder {
+  font-size: 13px;
+}
+
+/*  SIDEBAR */
+
+.side-indre {
+  justify-content: center;
+}
+
+.side-titel {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--sort);
+}
+
+.side-titel em {
+  font-style: normal;
+  display: inline;
+}
+
+/* ── CTA — WCAG 2.5.5 min 44px touch target ── */
+.hero-om-knap {
+  padding: 16px 24px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  border-radius: 0;
+}

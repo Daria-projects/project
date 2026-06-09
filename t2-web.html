@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T2 Grundlæggende web — Daria Novikova</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tema-base.css" />
+    <link rel="stylesheet" href="css/t2.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicons/favicon-dark.ico" />
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon-dark.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon-light.svg" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-dark-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-dark-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-dark.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/favicon-dark-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicons/favicon-dark-512x512.png" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="top-nav" aria-label="Sidenavigation">
+      <a href="index.html" class="nav-logo" aria-label="Gå til startside">
+        <span class="nav-logo-default" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 85.46 85.46" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42.73" cy="42.73" r="42.73" fill="#0d0d0b" />
+            <path
+              d="M33.98,59.08h16.02v6.83c0,1.58-.33,2.92-1,4.02s-1.6,1.93-2.8,2.5c-1.2.57-2.61.86-4.22.86-1.19,0-2.27-.16-3.26-.48s-1.83-.8-2.54-1.43-1.25-1.4-1.63-2.32c-.38-.92-.57-1.97-.57-3.15v-6.83ZM36.9,62.5v2.83c0,.64.09,1.24.26,1.78s.46,1.01.86,1.41.92.7,1.58.92,1.47.33,2.44.33c1.26,0,2.26-.19,2.99-.56.73-.37,1.26-.89,1.58-1.56.32-.67.48-1.44.48-2.32v-2.83h-10.2Z"
+              fill="#fafafa"
+            />
+            <path d="M21.73,35.25l-5.18-1.72v3.56l3.3,1.02v6.35l-3.3,1.02v3.56l16.02-5.31v-4.88l-10.84-3.6ZM29.98,41.38l-2.07.59-5.42,1.67v-4.71l5.42,1.68,2.07.61v.16Z" fill="#fafafa" />
+            <path
+              d="M44.59,21.53c.16-.36.4-.6.71-.74.31-.14.69-.21,1.14-.21h2.05c.38,0,.73-.02,1.05-.05.32-.04.58-.1.77-.19v-3.45c-.31.13-.62.21-.92.23-.31.02-.61.03-.9.03h-2.64c-.6,0-1.11.09-1.53.27-.42.17-.76.45-1.03.84-.27.39-.46.89-.56,1.51h-.13c-.25-.91-.72-1.63-1.4-2.16-.68-.52-1.52-.79-2.51-.79-.59,0-1.12.08-1.59.24-.47.17-.88.4-1.23.7-.35.3-.64.66-.88,1.1-.23.43-.41.91-.52,1.46-.12.54-.18,1.14-.18,1.8v8.15h16.02v-3.43h-5.98v-3.8c0-.66.09-1.16.26-1.51ZM37.13,26.84v-3.93c0-.38.04-.73.12-1.03.08-.31.21-.58.38-.82.18-.23.4-.41.67-.53.27-.13.61-.19,1.02-.19.66,0,1.21.2,1.65.59.44.4.66,1.06.66,1.98v3.93h-4.5Z"
+              fill="#fafafa"
+            />
+            <path d="M40.09,53.85v-16.02h3.43v16.02h-3.43Z" fill="#fafafa" />
+            <path d="M67.17,37.01v-3.56l-16.02,5.31v4.88l16.02,5.32v-3.56l-3.3-1.02v-6.35l3.3-1.02ZM61.24,43.56l-5.43-1.68-2.07-.61v-.16l2.07-.59,5.43-1.68v4.72Z" fill="#fafafa" />
+          </svg>
+        </span>
+        <span class="nav-logo-hover" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 85.46 85.46" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42.73" cy="42.73" r="42.73" fill="#ffefae" />
+            <path
+              d="M33.98,59.08h16.02v6.83c0,1.58-.33,2.92-1,4.02s-1.6,1.93-2.8,2.5c-1.2.57-2.61.86-4.22.86-1.19,0-2.27-.16-3.26-.48s-1.83-.8-2.54-1.43-1.25-1.4-1.63-2.32c-.38-.92-.57-1.97-.57-3.15v-6.83ZM36.9,62.5v2.83c0,.64.09,1.24.26,1.78s.46,1.01.86,1.41.92.7,1.58.92,1.47.33,2.44.33c1.26,0,2.26-.19,2.99-.56.73-.37,1.26-.89,1.58-1.56.32-.67.48-1.44.48-2.32v-2.83h-10.2Z"
+              fill="#0d0d0b"
+            />
+            <path d="M21.73,35.25l-5.18-1.72v3.56l3.3,1.02v6.35l-3.3,1.02v3.56l16.02-5.31v-4.88l-10.84-3.6ZM29.98,41.38l-2.07.59-5.42,1.67v-4.71l5.42,1.68,2.07.61v.16Z" fill="#0d0d0b" />
+            <path
+              d="M44.59,21.53c.16-.36.4-.6.71-.74.31-.14.69-.21,1.14-.21h2.05c.38,0,.73-.02,1.05-.05.32-.04.58-.1.77-.19v-3.45c-.31.13-.62.21-.92.23-.31.02-.61.03-.9.03h-2.64c-.6,0-1.11.09-1.53.27-.42.17-.76.45-1.03.84-.27.39-.46.89-.56,1.51h-.13c-.25-.91-.72-1.63-1.4-2.16-.68-.52-1.52-.79-2.51-.79-.59,0-1.12.08-1.59.24-.47.17-.88.4-1.23.7-.35.3-.64.66-.88,1.1-.23.43-.41.91-.52,1.46-.12.54-.18,1.14-.18,1.8v8.15h16.02v-3.43h-5.98v-3.8c0-.66.09-1.16.26-1.51ZM37.13,26.84v-3.93c0-.38.04-.73.12-1.03.08-.31.21-.58.38-.82.18-.23.4-.41.67-.53.27-.13.61-.19,1.02-.19.66,0,1.21.2,1.65.59.44.4.66,1.06.66,1.98v3.93h-4.5Z"
+              fill="#0d0d0b"
+            />
+            <path d="M40.09,53.85v-16.02h3.43v16.02h-3.43Z" fill="#0d0d0b" />
+            <path d="M67.17,37.01v-3.56l-16.02,5.31v4.88l16.02,5.32v-3.56l-3.3-1.02v-6.35l3.3-1.02ZM61.24,43.56l-5.43-1.68-2.07-.61v-.16l2.07-.59,5.43-1.68v4.72Z" fill="#0d0d0b" />
+          </svg>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#projekter" class="aktiv">Projekter</a></li>
+        <li><a href="om-mig.html">Om mig</a></li>
+        <li><a href="index.html#refleksion">Refleksion</a></li>
+      </ul>
+      <button type="button" class="burger-knap" aria-label="Åbn menu" aria-expanded="false" aria-controls="mobil-menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <!-- Mobil menu -->
+    <ul class="mobil-menu" id="mobil-menu">
+      <li><a href="index.html#projekter" class="aktiv">Projekter</a></li>
+      <li><a href="om-mig.html">Om mig</a></li>
+      <li><a href="index.html#refleksion">Refleksion</a></li>
+    </ul>
+
+    <!-- Projekt Layout Container -->
+    <div class="projekt-layout">
+      <!-- On-page Mobile Sub-navigation -->
+      <nav class="mobil-sek-nav">
+        <a href="#s1">Overblik</a>
+        <a href="#s2">Opgaven</a>
+        <a href="#s3">Processen</a>
+        <a href="#s4">Min løsning</a>
+        <a href="#s5">Hvad lærte jeg?</a>
+      </nav>
+
+      <main class="projekt-indhold" id="hoved-indhold">
+        <header class="projekt-hero">
+          <h2 class="projekt-titel">
+            Grundlæggende web &mdash;
+            <em>HTML, CSS og responsivt webdesign fra bunden</em>
+          </h2>
+        </header>
+
+        <!-- S1 Overblik -->
+        <section class="proces-afsnit proces-afsnit-enkelt" id="s1">
+          <div class="afsnit-hoejre afsnit-hoejre-bred">
+            <div class="citat-boks">
+              <p>Tre uger der lagde fundamentet for alt frontend-arbejde: semantisk HTML, CSS, responsivt design og designprincipper — alt sammen bygget op uge for uge fra bunden.</p>
+            </div>
+            <p class="afsnit-tekst">
+              Jeg lærte at opbygge websites fra bunden med korrekt struktur, arbejdede med responsivt layout med Grid, Flexbox og media queries, og brugte Uge 3 på designprincipper, moodboards og en galleriøvelse i Figma og CSS.
+            </p>
+            <div class="tags-liste">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Grid & Flexbox</span>
+              <span class="tag">Media queries</span>
+
+              <span class="tag">Typografi</span>
+
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Studiestartsprøve</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Links/CTA -->
+        <div class="hurtig-links">
+          <a href="https://daria-projects.github.io/WEBSITE/" class="hurtig-link fremhaevet" target="_blank" rel="noopener">↗ Live website</a>
+          <a href="https://daria-projects.github.io/MOBILESITE_opdatered/index.html" class="hurtig-link" target="_blank" rel="noopener">↗ Live mobilesite</a>
+        </div>
+
+        <!-- S2 Opgaven -->
+        <section class="proces-afsnit" id="s2">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">01 / Hvad var opgaven?</span>
+            <h3 class="afsnit-overskrift">To afleveringer — mobilsite og website</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">Temaet resulterede i to konkrete leverancer, der byggede direkte oven på hinanden:</p>
+            <ul class="tjekliste">
+              <li>
+                <b>Mobilsite:</b> Den første version af sitet kodet mobile-first ud fra udleveret wireframe og layoutdiagram. Fem HTML-sider (index, min_computer, operativsystemer, komponenter, galleri) med header, nav, main og footer. Krav om
+                valideret HTML5, to fonte, farver og korrekt brug af margin og padding.
+              </li>
+              <li>
+                <b>Website (studiestartsprøven):</b> Videreudvikling af mobilsitet til også at virke på desktop. CSS opdelt i to dokumenter — <code>generel.css</code> til styling og <code>layout.css</code> til layout. Layout og id/class-navne skulle
+                følge det udleverede layoutdiagram præcist. Afleveret som GitHub Pages-link og repository i WISEflow.
+              </li>
+            </ul>
+            <p class="afsnit-tekst">Begge opgaver stillede krav om teknisk korrekt HTML5, validering uden fejl og korrekt opsætning af metadata.</p>
+          </div>
+        </section>
+
+        <!-- S3 Proces -->
+        <section class="proces-afsnit" id="s3">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">02 / Proces</span>
+            <h3 class="afsnit-overskrift">Mobilsite → desktop website</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">Processen fulgte en naturlig progression: mobilsite først, derefter udvidelse til desktop — præcis som mobile-first tankegangen foreskriver.</p>
+            <ul class="tjekliste">
+              <li>Analyserede det udleverede wireframe og layoutdiagram og planlagde HTML-strukturen før jeg åbnede editoren</li>
+              <li>Opbyggede de fem HTML-sider med korrekt semantisk struktur: header, nav, main, footer</li>
+              <li>Stylede mobilversionen med farver, to fonte og margin/padding ud fra layoutdiagrammets id- og class-navne</li>
+              <li>Validerede HTML løbende på validator.w3.org — rettede fejl undervejs frem for til sidst</li>
+              <li>Udvidede til desktop ved at tilføje media queries og et responsivt layout i <code>layout.css</code></li>
+              <li>Separerede styling i to CSS-filer: <code>generel.css</code> til farver og typografi, <code>layout.css</code> til grid og placering</li>
+              <li>Uploadede til GitHub og testede det live site på GitHub Pages inden aflevering</li>
+            </ul>
+            <div class="billede-boks">
+              <img src="img/img_02/mobile.webp" alt="screenshot af mobilsite " />
+            </div>
+          </div>
+        </section>
+
+        <!-- S4 Løsning -->
+        <section class="proces-afsnit" id="s4">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">03 / Løsning</span>
+            <h3 class="afsnit-overskrift">Fem-siders website på GitHub Pages</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">Det færdige website består af fem sider om computere og operativsystemer, kodet fra bunden i semantisk HTML og CSS uden frameworks — og deployed live på GitHub Pages.</p>
+            <ul class="tjekliste">
+              <li>Fem validerede HTML5-sider: index, min_computer, operativsystemer, komponenter, galleri</li>
+              <li>CSS opdelt i <code>generel.css</code> (farver, typografi, spacing) og <code>layout.css</code> (grid, placering, responsivt)</li>
+              <li>Layout følger det udleverede layoutdiagram med præcise id- og class-navne</li>
+              <li>Responsivt design: mobilversion som base, desktop udvidet med media queries</li>
+              <li><code>min_computer.html</code> indeholder eget foto og tekst om min computer</li>
+              <li>Valideret uden fejl på validator.w3.org, <code>noindex</code> meta-tag i alle siders head</li>
+            </ul>
+            <div class="billede-boks">
+              <img src="img/img_02/website.webp" alt="Screenshot af det færdige website på GitHub Pages" />
+            </div>
+          </div>
+        </section>
+
+        <!-- S5 Refleksion -->
+        <section class="proces-afsnit" id="s5">
+          <div class="afsnit-venstre">
+            <span class="afsnit-nummer">04 / Refleksion</span>
+            <h3 class="afsnit-overskrift">Læring</h3>
+          </div>
+          <div class="afsnit-hoejre">
+            <p class="afsnit-tekst">
+              Tema 2 lagde fundamentet for resten af semesteret. Det, der overraskede mig mest, var at forstå <em>mekanikken</em> bag HTML og CSS — ikke bare syntaksen, men hvordan browseren fortolker struktur og stil adskilt fra hinanden.
+            </p>
+            <ul class="tjekliste">
+              <li>Semantisk HTML som rygraden — struktur skal give mening uden styling</li>
+              <li>Grid til todimensionelle layouts, Flexbox til éndimensionelle — de er ikke konkurrenter</li>
+              <li>Media queries og mobile-first: design til den mindste skærm først, udvid derefter</li>
+              <li>Moodboard og styletile som designredskaber der oversætter visuel retning til konkrete værdier</li>
+              <li>Codepen som hurtig eksperimentplads for CSS-idéer inden de skrives ind i projektet</li>
+            </ul>
+            <div class="indsigt">
+              <span class="indsigt-label">Indsigt</span>
+              <p class="indsigt-tekst">Webudvikling er et stort og komplekst felt — det lærte vi allerede i Uge 1. Det vigtigste jeg tog med var ikke at lære alle teknikker, men at forstå mekanikken godt nok til at lære nye teknikker selv.</p>
+            </div>
+          </div>
+        </section>
+
+        <nav class="projekt-nav">
+          <span class="pnav"><a href="t1-introuge.html">← 01 — Introuge</a></span>
+          <span class="pnav"><a href="t3-ux.html">03 — Grundlæggende UX/UI →</a></span>
+        </nav>
+      </main>
+
+      <!-- Nav SIDEBAR -->
+      <aside class="sidebar">
+        <a href="index.html" class="sidebar-tilbage">← &nbsp;1. semester</a>
+        <nav class="sidebar-sek-wrap" aria-label="Indholdsfortegnelse">
+          <p class="sidebar-sek-label">På denne side</p>
+          <button class="sidebar-sek-punkt aktiv" data-maal="s1"><span class="sek-nr">00</span><span class="sek-label">Overblik</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s2"><span class="sek-nr">01</span><span class="sek-label">Opgaven</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s3"><span class="sek-nr">02</span><span class="sek-label">Proces</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s4"><span class="sek-nr">03</span><span class="sek-label">Løsning</span></button>
+          <button class="sidebar-sek-punkt" data-maal="s5"><span class="sek-nr">04</span><span class="sek-label">Refleksion</span></button>
+        </nav>
+        <nav aria-label="Temanavigation">
+          <a href="t1-introuge.html" class="side-punkt side-moerk">
+            <div class="side-bg t1-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 01 &mdash; <em>Introuge</em></p>
+            </div>
+          </a>
+          <a href="t2-web.html" class="side-punkt side-moerk aktiv" aria-current="page">
+            <div class="side-bg t2-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 02 &mdash; <em>Grundlæggende web</em></p>
+            </div>
+          </a>
+          <a href="t3-ux.html" class="side-punkt side-moerk">
+            <div class="side-bg t3-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 03 &mdash; <em>Grundlæggende UX/UI</em></p>
+            </div>
+          </a>
+          <a href="t4-ui.html" class="side-punkt side-moerk">
+            <div class="side-bg t4-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 04 &mdash; <em>Brugergrænseflader</em></p>
+            </div>
+          </a>
+          <a href="t5-indhold.html" class="side-punkt side-moerk">
+            <div class="side-bg t5-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 05 &mdash; <em>Grundlæggende indhold</em></p>
+            </div>
+          </a>
+          <a href="t6-portfolio.html" class="side-punkt side-moerk">
+            <div class="side-bg t6-bg"></div>
+            <div class="side-indre">
+              <p class="side-titel">Tema 06 &mdash; <em>Portfolio-eksamen</em></p>
+            </div>
+          </a>
+        </nav>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <span class="footer-tekst">Daria Novikova &middot; Multimediedesign &middot; EK</span>
+      <span class="footer-tekst">Portfolio — 1. semester</span>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/tema.js"></script>
+  </body>
+</html>
