@@ -1,7 +1,7 @@
 /*  HERO  */
 /* H1 row: luft fra nav */
 .hero {
-  animation: fadeop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fadeop 0.55s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
 /* Every hero row: full bleed, padding, border-bottom */
