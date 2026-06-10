@@ -247,6 +247,14 @@
 .foto-celle {
   display: none;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.foto-celle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .kort {
@@ -544,7 +552,7 @@ body > * {
   }
 }
 
-/* ── SECTION HEADERS ────────────────────────────────────── */
+/*  SECTION HEADERS */
 
 .sektion-tekst {
   font-size: 13px;
@@ -570,7 +578,7 @@ body > * {
   color: var(--sort);
 }
 
-/* ── CARDS ──────────────────────────────────────────────── */
+/*  CARDS  */
 
 .kort-indre {
   display: grid;
@@ -639,7 +647,7 @@ body > * {
   }
 }
 
-/* ── REFLEKSION ─────────────────────────────────────────── */
+/*  REFLEKSION  */
 
 .ref-row {
   padding: 0;
@@ -745,7 +753,7 @@ body > * {
   }
 }
 
-/* ── GLOBAL TYPOGRAPHY FLOOR ────────────────────────────── */
+/*  GLOBAL TYPOGRAPHY  */
 
 .projekt-kicker {
   font-size: 13px;
@@ -850,7 +858,7 @@ body > * {
   display: inline;
 }
 
-/* ── CTA — WCAG 2.5.5 min 44px touch target ── */
+/*  CTA  */
 .hero-om-knap {
   padding: 16px 24px;
   min-height: 44px;

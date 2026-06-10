@@ -1,7 +1,5 @@
 /*  PORTFOLIO — DELT STYLESHEET
    Indeholder: tokens, reset, navigation, alle komponenter, responsivt layout (mobile-first). */
-/* Google Fonts: Mona Sans + Inter + Fragment Mono */
-@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&family=Inter:ital,wght@0,300..700;1,300..700&family=Fragment+Mono:ital@0;1&display=swap");
 
 /* em - styling */
 em {
