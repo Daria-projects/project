@@ -96,8 +96,8 @@ em {
   --accent: var(--t1);
 
   /* Typografi */
-  --serif: "Mona Sans", "Arial Black", system-ui, sans-serif;
-  --sans: "Inter", system-ui, sans-serif;
+  --serif: "Mona Sans", "Mona Sans Fallback", "Arial Black", system-ui, sans-serif;
+  --sans: "Inter", "Inter Fallback", system-ui, sans-serif;
   --mono: "Fragment Mono", "Courier New", monospace;
 
   /* Layout */

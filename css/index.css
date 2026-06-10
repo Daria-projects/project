@@ -1,3 +1,21 @@
+/* Fallback font metric overrides — reduces layout shift when web fonts swap in */
+@font-face {
+  font-family: "Mona Sans Fallback";
+  src: local("Arial Black");
+  size-adjust: 94%;
+  ascent-override: 95%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
 /*  HERO  */
 /* H1 row: luft fra nav */
 .hero {
