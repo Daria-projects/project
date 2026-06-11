@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/tema-base.css" />
     <link rel="stylesheet" href="css/t1.css" />
+    <link rel="preload" as="image" href="img/img_01/figma_storyboard.webp" />
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/favicons/favicon-dark.ico" />
     <link rel="icon" type="image/svg+xml" href="img/favicons/favicon-dark.svg" media="(prefers-color-scheme: light)" />
@@ -150,7 +151,7 @@
             <p class="afsnit-tekst">Efter første version itererede vi på baggrund af feedback for at forbedre struktur og tempo.</p>
 
             <div class="billede-boks">
-              <img src="img/img_01/figma_storyboard.webp" width="2200" height="1238" alt="Visionboard og storyboard i Figma" />
+              <img src="img/img_01/figma_storyboard.webp" width="2200" height="1238" alt="Visionboard og storyboard i Figma" fetchpriority="high" />
             </div>
           </div>
         </section>
@@ -178,7 +179,7 @@
             </p>
 
             <div class="billede-boks">
-              <img src="img/img_01/Intro_titelsekvens_video.webp" width="960" height="540" alt="Frame fra introvideo" />
+              <img src="img/img_01/Intro_titelsekvens_video.webp" width="960" height="540" alt="Frame fra introvideo" loading="lazy" />
             </div>
           </div>
         </section>
@@ -210,9 +211,9 @@
             </div>
           </div>
         </section>
-
+        <!-- Nav  -->
         <nav class="projekt-nav">
-          <span class="pnav">← Start</span>
+          <span class="pnav"><a href="index.html">← Forsiden</a></span>
           <span class="pnav"><a href="t2-web.html">02 — Grundlæggende web →</a></span>
         </nav>
       </main>
