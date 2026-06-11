@@ -879,3 +879,36 @@ body > * {
   font-size: 13px;
   border-radius: 0;
 }
+
+/* Bottom nav */
+
+.projekt-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 48px;
+  border-top: 1px solid var(--kant);
+}
+
+.pnav {
+  font-family: var(--sans);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--sten);
+}
+
+.pnav a {
+  color: var(--sten);
+  text-decoration: none;
+  transition: color 0.12s;
+}
+
+.pnav a:hover {
+  color: var(--sort);
+}
+
+@media (max-width: 640px) {
+  .projekt-nav {
+    padding: 16px 20px;
+  }
+}
