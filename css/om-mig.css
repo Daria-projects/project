@@ -215,13 +215,19 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color: var(--sten);
-  text-decoration: none;
-  transition: color 0.12s;
+  color: var(--sort);
+}
+
+.pnav {
+  color: var(--sort);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--kant);
+  transition: text-decoration-color 0.15s;
 }
 
 .pnav:hover {
-  color: var(--sort);
+  text-decoration-color: var(--sort);
 }
 
 @media (max-width: 640px) {
