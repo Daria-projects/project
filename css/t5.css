@@ -2,3 +2,8 @@
 :root {
   --accent: #bc892b;
 }
+
+/* Adds top spacing before a sub-section paragraph within a step */
+.afsnit-tekst--mt {
+  margin-top: 1.5em;
+}
