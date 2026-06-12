@@ -1,28 +1,14 @@
-/* ── nav.js ──────────────────────────────────────────────────
+/* ── nav.js
    Deles af alle sider.
    Indeholder:
-     1. Tastatur-fokus synlighed (skjul outline ved mus)
-     2. Mobilmenu (åbn/luk, Escape, klik udenfor) */
-
-"use strict";
-
-/* 1. Skjul fokus-ring når brugeren bruger mus,
-      vis den igen ved tastatur (Tab).             */
-document.body.addEventListener("mousedown", function () {
-  document.body.classList.add("brug-mus");
-});
-
-document.body.addEventListener("keydown", function (e) {
-  if (e.key === "Tab") {
-    document.body.classList.remove("brug-mus");
-  }
-});
+     1. Mobilmenu (åbn/luk, Escape, klik udenfor) */
 
 /* 2. Mobilmenu */
 var burgerKnap = document.querySelector(".burger-knap");
 var mobilMenu = document.querySelector(".mobil-menu");
 
 if (burgerKnap && mobilMenu) {
+
   function aabneMenu() {
     mobilMenu.classList.add("aaben");
     burgerKnap.setAttribute("aria-expanded", "true");
@@ -63,4 +49,5 @@ if (burgerKnap && mobilMenu) {
       lukkeMenu();
     }
   });
+
 }

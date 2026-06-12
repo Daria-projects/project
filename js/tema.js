@@ -1,21 +1,14 @@
-/* ── tema.js 
+/* ── tema.js
    Brugt på alle temaprojektsider (t1–t6) og om-mig.
    Indeholder:
      Sidebar-sektionsnavigation (kun desktop):
        - Klik på en knap → smooth scroll til den sektion
        - Scroll i siden → fremhæv den aktuelle sektion
-    */
-
-"use strict";
+*/
 
 var sektionsPunkter = document.querySelectorAll(".sidebar-sek-punkt");
 
 if (sektionsPunkter.length > 0) {
-  /* Hent alle sektion-id'er fra knappernes data-maal attribut */
-  var sektionIds = [];
-  sektionsPunkter.forEach(function (punkt) {
-    sektionIds.push(punkt.getAttribute("data-maal"));
-  });
 
   /* Klik: scroll til den valgte sektion */
   sektionsPunkter.forEach(function (punkt) {
@@ -32,7 +25,7 @@ if (sektionsPunkter.length > 0) {
 
       window.scrollTo({ top: afstand, behavior: "smooth" });
 
-      /* Sæt aktiv klasse på den klikkede knap */
+      /* Fjern aktiv fra alle, sæt aktiv på den klikkede */
       sektionsPunkter.forEach(function (p) {
         p.classList.remove("aktiv");
       });
@@ -44,27 +37,27 @@ if (sektionsPunkter.length > 0) {
   function opdaterAktivSektion() {
     var navEl = document.querySelector(".top-nav");
     var navHoejde = navEl ? navEl.offsetHeight : 48;
-    var aktuelId = sektionIds[0]; /* Fallback: første sektion */
+    var aktuelPunkt = sektionsPunkter[0]; /* Fallback: første sektion */
 
-    sektionIds.forEach(function (id) {
-      var el = document.getElementById(id);
+    sektionsPunkter.forEach(function (punkt) {
+      var maalId = punkt.getAttribute("data-maal");
+      var el = document.getElementById(maalId);
+
       if (el && el.getBoundingClientRect().top <= navHoejde + 60) {
-        aktuelId = id;
+        aktuelPunkt = punkt;
       }
     });
 
-    sektionsPunkter.forEach(function (punkt, i) {
-      if (sektionIds[i] === aktuelId) {
-        punkt.classList.add("aktiv");
-      } else {
-        punkt.classList.remove("aktiv");
-      }
+    /* Fjern aktiv fra alle, sæt aktiv på den rigtige */
+    sektionsPunkter.forEach(function (p) {
+      p.classList.remove("aktiv");
     });
+    aktuelPunkt.classList.add("aktiv");
   }
 
-  /* Lyt på scroll — passive: true forbedrer ydeevnen */
-  window.addEventListener("scroll", opdaterAktivSektion, { passive: true });
+  /* Lyt på scroll */
+  window.addEventListener("scroll", opdaterAktivSektion);
 
-  /* Kør én gang ved load for at sætte den rigtige aktive sektion */
+  /* Kør én gang ved load */
   opdaterAktivSektion();
 }

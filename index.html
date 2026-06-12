@@ -25,6 +25,9 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Forudindlæs LCP-billede så browseren henter det så tidligt som muligt Lighthouse-->
+    <link rel="preload" as="image" href="img/img_index/01-676.webp" imagesrcset="img/img_index/01-676.webp 676w, img/img_index/01.webp 960w" imagesizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw" />
   </head>
 
   <body>
@@ -136,7 +139,16 @@
           </a>
           <!-- Mono -->
           <div class="foto-celle">
-            <img src="img/img_index/01.webp" srcset="img/img_index/01-676.webp 676w, img/img_index/01.webp 960w" sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw" width="960" height="960" alt="Gestuel penselstrøg — organisk kontrast til projektkorterne" />
+            <img
+              src="img/img_index/01.webp"
+              srcset="img/img_index/01-676.webp 676w, img/img_index/01.webp 960w"
+              sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw"
+              width="960"
+              height="960"
+              alt="Gestuel penselstrøg — organisk kontrast til projektkorterne"
+              fetchpriority="high"
+              loading="eager"
+            />
           </div>
 
           <!-- Row 2: T03 · Mono · T04 -->
@@ -152,7 +164,15 @@
           </a>
           <!-- Mono -->
           <div class="foto-celle">
-            <img src="img/img_index/02.webp" srcset="img/img_index/02-676.webp 676w, img/img_index/02.webp 960w" sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw" width="960" height="960" alt="Cirkulær penselform — organisk kontrast til projektkorterne" />
+            <img
+              src="img/img_index/02.webp"
+              srcset="img/img_index/02-676.webp 676w, img/img_index/02.webp 960w"
+              sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw"
+              width="960"
+              height="960"
+              alt="Cirkulær penselform — organisk kontrast til projektkorterne"
+              loading="lazy"
+            />
           </div>
           <!-- T04 -->
           <a href="t4-ui.html" class="kort moerk">
@@ -168,7 +188,15 @@
           <!-- Row 3: Mono · T05 · T06 -->
           <!-- Mono -->
           <div class="foto-celle">
-            <img src="img/img_index/03.webp" srcset="img/img_index/03-676.webp 676w, img/img_index/03.webp 960w" sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw" width="960" height="960" alt="Ekspressivt penselstrøg — organisk kontrast til projektkorterne" />
+            <img
+              src="img/img_index/03.webp"
+              srcset="img/img_index/03-676.webp 676w, img/img_index/03.webp 960w"
+              sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw"
+              width="960"
+              height="960"
+              alt="Ekspressivt penselstrøg — organisk kontrast til projektkorterne"
+              loading="lazy"
+            />
           </div>
           <!-- T05 -->
           <a href="t5-indhold.html" class="kort moerk">
