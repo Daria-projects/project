@@ -28,10 +28,6 @@
   border-bottom: 1px solid var(--kant);
 }
 
-.hero-row-kicker {
-  padding-top: 28px;
-  padding-bottom: 16px;
-}
 
 .hero-row-navn {
   padding-top: 0;
@@ -43,48 +39,8 @@
   padding-bottom: 20px;
 }
 
-.hero-row-tags {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
 
-.hero-row-nav {
-  display: flex;
-  gap: 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 0;
-}
 
-.hero-row-nav::-webkit-scrollbar {
-  display: none;
-}
-
-.hero-overtekst {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--sten);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.hero-overtekst::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 1px;
-  background: var(--sten);
-  flex-shrink: 0;
-}
 
 .hero-titel {
   font-family: var(--serif);
@@ -101,26 +57,7 @@
   display: block;
 }
 
-.hero-undertitel {
-  display: block;
-  font-family: var(--mono);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--sten);
-  margin-top: 14px;
-  line-height: 1.6;
-}
 
-.hero-bio-etiket {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--sten);
-  margin-bottom: 8px;
-}
 
 .hero-bio-tekst {
   font-family: var(--sans);
@@ -162,51 +99,7 @@
   color: var(--sort);
 }
 
-.hero-nav-link {
-  font-family: var(--serif);
-  font-size: clamp(20px, 5vw, 38px);
-  font-weight: 700;
-  font-style: oblique 10deg;
-  color: var(--sten);
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding: 14px clamp(14px, 3vw, 24px);
-  transition:
-    color var(--trans),
-    background var(--trans);
-}
 
-.hero-nav-link:hover,
-.hero-nav-link:focus {
-  outline: none;
-  color: var(--sort);
-}
-
-.hero-nav-link[data-tema="t1"]:is(:hover, :focus) {
-  background: var(--t1);
-}
-.hero-nav-link[data-tema="t2"]:is(:hover, :focus) {
-  background: var(--t2);
-}
-.hero-nav-link[data-tema="t3"]:is(:hover, :focus) {
-  background: var(--t3);
-}
-.hero-nav-link[data-tema="t4"]:is(:hover, :focus) {
-  background: var(--t4);
-}
-.hero-nav-link[data-tema="t5"]:is(:hover, :focus) {
-  background: var(--t5);
-}
-.hero-nav-link[data-tema="t6"]:is(:hover, :focus) {
-  background: var(--t6);
-}
-
-/* REFLEKSION — hver row er en blok */
-
-.ref-row {
-  padding: 24px var(--gap);
-  border-bottom: 1px solid var(--kant);
-}
 
 .ref-stor-h {
   font-family: var(--serif);
@@ -217,42 +110,7 @@
   text-transform: uppercase;
 }
 
-.ref-intro {
-  font-family: var(--sans);
-  font-size: 15px;
-  line-height: 1.76;
-  color: #444;
-}
 
-.ref-celler {
-  display: flex;
-  flex-direction: column;
-}
-
-.ref-celle {
-  padding: 20px var(--gap);
-  border-bottom: 1px solid var(--kant);
-}
-
-.ref-celle:last-child {
-  border-bottom: none;
-}
-
-.ref-celle-etiket {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--sten);
-  margin-bottom: 7px;
-}
-
-.ref-celle-tekst {
-  font-family: var(--sans);
-  font-size: 14px;
-  line-height: 1.68;
-  color: #444;
-}
 
 /* PROJEKTKORT — FORSIDE */
 
@@ -341,11 +199,6 @@
   text-transform: uppercase;
 }
 
-.kort-nummer {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.1em;
-}
 
 .kort-titel {
   font-family: var(--serif);
@@ -367,16 +220,6 @@
   line-height: 1.5;
 }
 
-/* Lys tekst (hvid) */
-.lys .kort-type,
-.lys .kort-titel {
-  color: #fff;
-}
-
-.lys .kort-meta,
-.lys .kort-nummer {
-  color: rgba(255, 255, 255, 0.8);
-}
 
 /* Mørk tekst (sort) */
 .moerk .kort-type,
@@ -384,10 +227,6 @@
   color: var(--sort);
 }
 
-.moerk .kort-meta,
-.moerk .kort-nummer {
-  color: var(--sort);
-}
 
 /* Pil der vises ved hover */
 .kort-enter {
@@ -425,48 +264,10 @@
   transform: translateY(0);
 }
 
-/* FORSIDE — OM MIG STRIP */
-
-.vaerktoej-liste {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.vaerktoej-tag {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.07em;
-  padding: 4px 9px;
-  border: 0.5px solid var(--kant-tyk);
-  border-radius: var(--radius);
-  color: var(--sten);
-}
 
 @media (min-width: 600px) {
-  .hero-row-tags {
-    flex-wrap: nowrap;
-  }
 
-  .ref-celler {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .ref-celle {
-    border-right: 1px solid var(--kant);
-    border-bottom: 1px solid var(--kant);
-  }
-
-  .ref-celle:nth-child(2n) {
-    border-right: none;
-  }
-
-  .ref-celle:nth-last-child(-n + 2) {
-    border-bottom: none;
-  }
-
-  .projekt-gitter {
+.projekt-gitter {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -494,12 +295,6 @@ body > * {
 
 /*  HERO ─ */
 
-.hero-undertitel {
-  display: none;
-}
-.hero-row-tags {
-  display: none;
-}
 
 /* H1 row: clear breathing room from nav */
 .hero-row-navn {
@@ -566,9 +361,6 @@ body > * {
 
 /*  SECTION HEADERS */
 
-.sektion-tekst {
-  font-size: 13px;
-}
 
 /* Unified section opener: same for Projekter and Refleksion */
 .sek-overskrift-row {
@@ -661,19 +453,12 @@ body > * {
 
 /*  REFLEKSION  */
 
-.ref-row {
-  padding: 0;
-  border-bottom: none;
-}
 
 #refleksion {
   width: 100%;
   overflow: hidden;
 }
 
-.ref-intro-row {
-  display: none;
-}
 .ref-intro-tekst {
   font-family: var(--sans);
   font-size: 16px;
@@ -767,15 +552,6 @@ body > * {
 
 /*  GLOBAL TYPOGRAPHY  */
 
-.projekt-kicker {
-  font-size: 13px;
-}
-.meta-etiket {
-  font-size: 13px;
-}
-.meta-vaerdi {
-  font-size: 14px;
-}
 .hurtig-link {
   font-size: 13px;
 }
@@ -793,12 +569,6 @@ body > * {
 }
 .tag {
   font-size: 13px;
-}
-.pgk-nr {
-  font-size: 13px;
-}
-.pgk-bund {
-  font-size: 14px;
 }
 .dim-navn {
   font-size: 13px;
@@ -836,13 +606,7 @@ body > * {
 .cv-tekst {
   font-size: 15px;
 }
-.sem-tekst {
-  font-size: 16px;
-}
 .mobil-sek-nav a {
-  font-size: 13px;
-}
-.billede-pladsholder {
   font-size: 13px;
 }
 .portræt-pladsholder {

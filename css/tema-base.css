@@ -208,35 +208,6 @@ body {
   opacity: 1;
 }
 
-/* Pil vises centreret ved hover (samme som .kort-enter) */
-.side-enter {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.22s ease 0.16s;
-}
-
-.side-enter span {
-  font-family: var(--serif);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--sort);
-  transform: translateY(6px);
-  transition: transform 0.22s ease 0.16s;
-}
-
-.side-punkt:hover .side-enter {
-  opacity: 1;
-}
-
-.side-punkt:hover .side-enter span {
-  transform: translateY(0);
-}
 
 .side-titel {
   font-family: var(--serif);

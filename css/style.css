@@ -182,10 +182,6 @@ a {
   z-index: 500;
 }
 
-.nav-navn {
-  display: none;
-}
-
 .burger-knap {
   align-self: center;
 }
@@ -330,24 +326,6 @@ a {
 
 .mobil-menu a.aktiv {
   color: var(--sort);
-}
-
-/* SEKTION-BAR */
-
-.sektion-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 9px var(--gap);
-  border-bottom: 1px solid var(--kant);
-}
-
-.sektion-tekst {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--sten);
 }
 
 /* FOOTER */
