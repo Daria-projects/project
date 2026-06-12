@@ -28,7 +28,6 @@
   border-bottom: 1px solid var(--kant);
 }
 
-
 .hero-row-navn {
   padding-top: 0;
   padding-bottom: 20px;
@@ -38,9 +37,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
-
-
 
 .hero-titel {
   font-family: var(--serif);
@@ -56,8 +52,6 @@
   font-weight: 700;
   display: block;
 }
-
-
 
 .hero-bio-tekst {
   font-family: var(--sans);
@@ -99,8 +93,6 @@
   color: var(--sort);
 }
 
-
-
 .ref-stor-h {
   font-family: var(--serif);
   font-weight: 900;
@@ -109,8 +101,6 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
-
-
 
 /* PROJEKTKORT — FORSIDE */
 
@@ -199,7 +189,6 @@
   text-transform: uppercase;
 }
 
-
 .kort-titel {
   font-family: var(--serif);
   font-weight: 700;
@@ -220,13 +209,11 @@
   line-height: 1.5;
 }
 
-
 /* Mørk tekst (sort) */
 .moerk .kort-type,
 .moerk .kort-titel {
   color: var(--sort);
 }
-
 
 /* Pil der vises ved hover */
 .kort-enter {
@@ -264,10 +251,8 @@
   transform: translateY(0);
 }
 
-
 @media (min-width: 600px) {
-
-.projekt-gitter {
+  .projekt-gitter {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -294,7 +279,6 @@ body > * {
 }
 
 /*  HERO ─ */
-
 
 /* H1 row: clear breathing room from nav */
 .hero-row-navn {
@@ -360,7 +344,6 @@ body > * {
 }
 
 /*  SECTION HEADERS */
-
 
 /* Unified section opener: same for Projekter and Refleksion */
 .sek-overskrift-row {
@@ -453,7 +436,6 @@ body > * {
 
 /*  REFLEKSION  */
 
-
 #refleksion {
   width: 100%;
   overflow: hidden;
@@ -485,7 +467,6 @@ body > * {
   flex-direction: column;
   gap: 8px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .ref-kat-nr {
