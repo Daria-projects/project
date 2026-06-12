@@ -9,7 +9,6 @@
 var sektionsPunkter = document.querySelectorAll(".sidebar-sek-punkt");
 
 if (sektionsPunkter.length > 0) {
-
   /* Klik: scroll til den valgte sektion */
   sektionsPunkter.forEach(function (punkt) {
     punkt.addEventListener("click", function () {

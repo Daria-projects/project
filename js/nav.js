@@ -8,7 +8,6 @@ var burgerKnap = document.querySelector(".burger-knap");
 var mobilMenu = document.querySelector(".mobil-menu");
 
 if (burgerKnap && mobilMenu) {
-
   function aabneMenu() {
     mobilMenu.classList.add("aaben");
     burgerKnap.setAttribute("aria-expanded", "true");
@@ -49,5 +48,4 @@ if (burgerKnap && mobilMenu) {
       lukkeMenu();
     }
   });
-
 }
