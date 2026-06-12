@@ -121,13 +121,9 @@ body {
 
 /* Semester section  */
 
-.baggrund-giver {
-  border-bottom: 1px solid var(--kant);
-}
-
 .sem-top {
   padding: calc(var(--gap) * 1.5) var(--gap);
-  border-bottom: 1px solid var(--kant);
+
   display: flex;
   flex-direction: column;
   gap: 16px;
