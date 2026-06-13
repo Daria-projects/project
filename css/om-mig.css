@@ -14,14 +14,14 @@ body {
 
 .om-mig-hero {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   border-bottom: 1px solid var(--kant);
   align-items: stretch;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .om-mig-hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -147,14 +147,19 @@ body {
   margin: 0;
 }
 
-
 /* Tilbage til forsiden */
 
 .projekt-nav {
   display: flex;
   justify-content: flex-end;
-  padding: 16px 48px;
+  padding: 16px 20px;
   border-top: 1px solid var(--kant);
+}
+
+@media (min-width: 640px) {
+  .projekt-nav {
+    padding: 16px 48px;
+  }
 }
 
 .pnav {
@@ -175,10 +180,4 @@ body {
 
 .pnav:hover {
   text-decoration-color: var(--sort);
-}
-
-@media (max-width: 640px) {
-  .projekt-nav {
-    padding: 16px 20px;
-  }
 }
