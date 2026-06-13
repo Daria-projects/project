@@ -1,31 +1,18 @@
-/* Fallback font metric overrides — reduces layout shift when web fonts swap in */
-@font-face {
-  font-family: "Mona Sans Fallback";
-  src: local("Arial Black");
-  size-adjust: 94%;
-  ascent-override: 95%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-@font-face {
-  font-family: "Inter Fallback";
-  src: local("Arial");
-  size-adjust: 107%;
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
 /*  HERO  */
 /* H1 row: luft fra nav */
 .hero {
-  animation: fadeop 0.55s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation: fadeop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Every hero row: full bleed, padding, border-bottom */
 .hero-row {
   padding: 0 var(--gap);
   border-bottom: 1px solid var(--kant);
+}
+
+.hero-row-kicker {
+  padding-top: 28px;
+  padding-bottom: 16px;
 }
 
 .hero-row-navn {
@@ -38,6 +25,49 @@
   padding-bottom: 20px;
 }
 
+.hero-row-tags {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-row-nav {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0;
+}
+
+.hero-row-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-overtekst {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sten);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-overtekst::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--sten);
+  flex-shrink: 0;
+}
+
 .hero-titel {
   font-family: var(--serif);
   font-size: clamp(56px, 16vw, 130px);
@@ -48,9 +78,30 @@
 }
 
 .hero-titel em {
-  font-style: oblique 10deg;
+  font-style: normal;
   font-weight: 700;
   display: block;
+}
+
+.hero-undertitel {
+  display: block;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sten);
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+.hero-bio-etiket {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sten);
+  margin-bottom: 8px;
 }
 
 .hero-bio-tekst {
@@ -93,6 +144,52 @@
   color: var(--sort);
 }
 
+.hero-nav-link {
+  font-family: var(--serif);
+  font-size: clamp(20px, 5vw, 38px);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--sten);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 14px clamp(14px, 3vw, 24px);
+  transition:
+    color var(--trans),
+    background var(--trans);
+}
+
+.hero-nav-link:hover,
+.hero-nav-link:focus {
+  outline: none;
+  color: var(--sort);
+}
+
+.hero-nav-link[data-tema="t1"]:is(:hover, :focus) {
+  background: var(--t1);
+}
+.hero-nav-link[data-tema="t2"]:is(:hover, :focus) {
+  background: var(--t2);
+}
+.hero-nav-link[data-tema="t3"]:is(:hover, :focus) {
+  background: var(--t3);
+}
+.hero-nav-link[data-tema="t4"]:is(:hover, :focus) {
+  background: var(--t4);
+}
+.hero-nav-link[data-tema="t5"]:is(:hover, :focus) {
+  background: var(--t5);
+}
+.hero-nav-link[data-tema="t6"]:is(:hover, :focus) {
+  background: var(--t6);
+}
+
+/* REFLEKSION — hver row er en blok */
+
+.ref-row {
+  padding: 24px var(--gap);
+  border-bottom: 1px solid var(--kant);
+}
+
 .ref-stor-h {
   font-family: var(--serif);
   font-weight: 900;
@@ -100,6 +197,43 @@
   line-height: 0.88;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+}
+
+.ref-intro {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.76;
+  color: #444;
+}
+
+.ref-celler {
+  display: flex;
+  flex-direction: column;
+}
+
+.ref-celle {
+  padding: 20px var(--gap);
+  border-bottom: 1px solid var(--kant);
+}
+
+.ref-celle:last-child {
+  border-bottom: none;
+}
+
+.ref-celle-etiket {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sten);
+  margin-bottom: 7px;
+}
+
+.ref-celle-tekst {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.68;
+  color: #444;
 }
 
 /* PROJEKTKORT — FORSIDE */
@@ -113,14 +247,6 @@
 .foto-celle {
   display: none;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
-}
-
-.foto-celle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .kort {
@@ -189,6 +315,12 @@
   text-transform: uppercase;
 }
 
+.kort-nummer {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
 .kort-titel {
   font-family: var(--serif);
   font-weight: 700;
@@ -198,7 +330,7 @@
 }
 
 .kort-titel em {
-  font-style: oblique 10deg;
+  font-style: normal;
   display: block;
 }
 
@@ -209,9 +341,25 @@
   line-height: 1.5;
 }
 
+/* Lys tekst (hvid) */
+.lys .kort-type,
+.lys .kort-titel {
+  color: #fff;
+}
+
+.lys .kort-meta,
+.lys .kort-nummer {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /* Mørk tekst (sort) */
 .moerk .kort-type,
 .moerk .kort-titel {
+  color: var(--sort);
+}
+
+.moerk .kort-meta,
+.moerk .kort-nummer {
   color: var(--sort);
 }
 
@@ -251,7 +399,50 @@
   transform: translateY(0);
 }
 
+/* ═══════════════════════════════════════════════════════════
+   FORSIDE — OM MIG STRIP
+   Slim chapter — bio + tags + link. No repeated name heading.
+   ═══════════════════════════════════════════════════════════ */
+
+.vaerktoej-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vaerktoej-tag {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.07em;
+  padding: 4px 9px;
+  border: 0.5px solid var(--kant-tyk);
+  border-radius: var(--radius);
+  color: var(--sten);
+}
+
 @media (min-width: 600px) {
+  .hero-row-tags {
+    flex-wrap: nowrap;
+  }
+
+  .ref-celler {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ref-celle {
+    border-right: 1px solid var(--kant);
+    border-bottom: 1px solid var(--kant);
+  }
+
+  .ref-celle:nth-child(2n) {
+    border-right: none;
+  }
+
+  .ref-celle:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
   .projekt-gitter {
     grid-template-columns: 1fr 1fr;
   }
@@ -267,7 +458,10 @@
   }
 }
 
-/* INDEX.CSS — Daria Novikova Portfolio */
+/* ══════════════════════════════════════════════════════════
+   INDEX.CSS — Daria Novikova Portfolio
+   Single authoritative file. No duplicate rules.
+   ══════════════════════════════════════════════════════════ */
 
 html {
   overflow-x: hidden;
@@ -278,7 +472,14 @@ body > * {
   overflow-x: hidden;
 }
 
-/*  HERO ─ */
+/* ── HERO ───────────────────────────────────────────────── */
+
+.hero-undertitel {
+  display: none;
+}
+.hero-row-tags {
+  display: none;
+}
 
 /* H1 row: clear breathing room from nav */
 .hero-row-navn {
@@ -287,10 +488,10 @@ body > * {
   padding-bottom: calc(var(--gap) * 1.5);
 }
 
-/* Tagline row: single column on mobile, 2/3 + 1/3 on wider screens */
+/* Tagline row: 2/3 content, 1/3 empty */
 .hero-row-tagline {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 2fr 1fr;
   border-bottom: none;
   padding-top: 0;
   padding-bottom: 0;
@@ -305,10 +506,10 @@ body > * {
   grid-column: 1;
 }
 
-/* Bio row: single column on mobile, 2/3 + 1/3 on wider screens */
+/* Bio row: 2/3 content, 1/3 empty, closes hero with border */
 .hero-row-bio {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 2fr 1fr;
   align-items: start;
   padding-top: calc(var(--gap) * 1);
   padding-bottom: 0;
@@ -334,16 +535,20 @@ body > * {
   margin-bottom: calc(var(--gap) * 1.5);
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .hero-row-tagline {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
   }
   .hero-row-bio {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
-/*  SECTION HEADERS */
+/* ── SECTION HEADERS ────────────────────────────────────── */
+
+.sektion-tekst {
+  font-size: 13px;
+}
 
 /* Unified section opener: same for Projekter and Refleksion */
 .sek-overskrift-row {
@@ -365,7 +570,7 @@ body > * {
   color: var(--sort);
 }
 
-/*  CARDS  */
+/* ── CARDS ──────────────────────────────────────────────── */
 
 .kort-indre {
   display: grid;
@@ -434,13 +639,21 @@ body > * {
   }
 }
 
-/*  REFLEKSION  */
+/* ── REFLEKSION ─────────────────────────────────────────── */
+
+.ref-row {
+  padding: 0;
+  border-bottom: none;
+}
 
 #refleksion {
   width: 100%;
   overflow: hidden;
 }
 
+.ref-intro-row {
+  display: none;
+}
 .ref-intro-tekst {
   font-family: var(--sans);
   font-size: 16px;
@@ -467,6 +680,7 @@ body > * {
   flex-direction: column;
   gap: 8px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .ref-kat-nr {
@@ -488,7 +702,7 @@ body > * {
 }
 
 .ref-kat-titel em {
-  font-style: oblique 10deg;
+  font-style: normal;
   font-weight: 700;
   display: block;
 }
@@ -531,8 +745,17 @@ body > * {
   }
 }
 
-/*  GLOBAL TYPOGRAPHY  */
+/* ── GLOBAL TYPOGRAPHY FLOOR ────────────────────────────── */
 
+.projekt-kicker {
+  font-size: 13px;
+}
+.meta-etiket {
+  font-size: 13px;
+}
+.meta-vaerdi {
+  font-size: 14px;
+}
 .hurtig-link {
   font-size: 13px;
 }
@@ -550,6 +773,12 @@ body > * {
 }
 .tag {
   font-size: 13px;
+}
+.pgk-nr {
+  font-size: 13px;
+}
+.pgk-bund {
+  font-size: 14px;
 }
 .dim-navn {
   font-size: 13px;
@@ -587,7 +816,13 @@ body > * {
 .cv-tekst {
   font-size: 15px;
 }
+.sem-tekst {
+  font-size: 16px;
+}
 .mobil-sek-nav a {
+  font-size: 13px;
+}
+.billede-pladsholder {
   font-size: 13px;
 }
 .portræt-pladsholder {
@@ -615,7 +850,7 @@ body > * {
   display: inline;
 }
 
-/*  CTA  */
+/* ── CTA — WCAG 2.5.5 min 44px touch target ── */
 .hero-om-knap {
   padding: 16px 24px;
   min-height: 44px;
@@ -623,39 +858,4 @@ body > * {
   align-items: center;
   font-size: 13px;
   border-radius: 0;
-}
-
-/* Bottom nav */
-
-.projekt-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 20px;
-  border-top: 1px solid var(--kant);
-}
-
-.pnav {
-  font-family: var(--sans);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: var(--sort);
-}
-
-.pnav a {
-  color: var(--sort);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: var(--kant);
-  transition: text-decoration-color 0.15s;
-}
-
-.pnav a:hover {
-  text-decoration-color: var(--sort);
-}
-
-@media (min-width: 640px) {
-  .projekt-nav {
-    padding: 16px 48px;
-  }
 }

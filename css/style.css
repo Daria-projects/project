@@ -1,77 +1,77 @@
-/* FONTS — self-hosted */
+/* LOCAL FONTS — replaces Google Fonts @import */
+/* Mona Sans — all weights */
 @font-face {
   font-family: "Mona Sans";
   src: url("../fonts/mona-sans-v4-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Mona Sans";
   src: url("../fonts/mona-sans-v4-latin-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Mona Sans";
   src: url("../fonts/mona-sans-v4-latin-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Mona Sans";
   src: url("../fonts/mona-sans-v4-latin-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Mona Sans";
   src: url("../fonts/mona-sans-v4-latin-900.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
+
+
+/* Inter — 400, 500, 600 used across the site */
 @font-face {
   font-family: "Inter";
   src: url("../fonts/inter-v20-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Inter";
   src: url("../fonts/inter-v20-latin-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Inter";
   src: url("../fonts/inter-v20-latin-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
+
+/* Fragment Mono — 400 normal only */
 @font-face {
   font-family: "Fragment Mono";
   src: url("../fonts/fragment-mono-v6-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
-@font-face {
-  font-family: "Fragment Mono";
-  src: url("../fonts/fragment-mono-v6-latin-italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
 /*  PORTFOLIO — DELT STYLESHEET
    Indeholder: tokens, reset, navigation, alle komponenter, responsivt layout (mobile-first). */
+/* Google Fonts: Mona Sans + Inter + Fragment Mono */
+
 
 /* em - styling */
 em {
@@ -96,12 +96,12 @@ em {
   --accent: var(--t1);
 
   /* Typografi */
-  --serif: "Mona Sans", "Mona Sans Fallback", "Arial Black", system-ui, sans-serif;
-  --sans: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --serif: "Mona Sans", "Arial Black", system-ui, sans-serif;
+  --sans: "Inter", system-ui, sans-serif;
   --mono: "Fragment Mono", "Courier New", monospace;
 
   /* Layout */
-  --nav-h: 64px;
+  --nav-h: 56px;
   --gap: 20px;
   --radius: 2px;
   --trans: 0.22s cubic-bezier(0.22, 1, 0.36, 1);
@@ -125,6 +125,7 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -169,7 +170,7 @@ a {
 }
 
 .top-nav {
-  height: var(--nav-h);
+  height: 64px;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -179,6 +180,10 @@ a {
   top: 0;
   background: var(--papir);
   z-index: 500;
+}
+
+.nav-navn {
+  display: none;
 }
 
 .burger-knap {
@@ -327,6 +332,24 @@ a {
   color: var(--sort);
 }
 
+/* SEKTION-BAR */
+
+.sektion-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px var(--gap);
+  border-bottom: 1px solid var(--kant);
+}
+
+.sektion-tekst {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sten);
+}
+
 /* FOOTER */
 footer {
   display: flex;
@@ -350,6 +373,10 @@ footer {
 @media (min-width: 600px) {
   :root {
     --gap: 32px;
+    --nav-h: 64px;
+  }
+  .top-nav {
+    height: 64px;
   }
 
   .nav-links {

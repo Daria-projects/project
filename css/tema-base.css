@@ -32,8 +32,8 @@ body {
     grid-row: 1;
     order: -1;
     position: sticky;
-    top: var(--nav-h);
-    height: calc(100vh - var(--nav-h));
+    top: 64px;
+    height: calc(100vh - 64px);
     overflow-y: auto;
     border-right: 1px var(--kant);
     display: flex;
@@ -208,6 +208,36 @@ body {
   opacity: 1;
 }
 
+/* Pil vises centreret ved hover (samme som .kort-enter) */
+.side-enter {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.22s ease 0.16s;
+}
+
+.side-enter span {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--sort);
+  transform: translateY(6px);
+  transition: transform 0.22s ease 0.16s;
+}
+
+.side-punkt:hover .side-enter {
+  opacity: 1;
+}
+
+.side-punkt:hover .side-enter span {
+  transform: translateY(0);
+}
+
 .side-titel {
   font-family: var(--serif);
   font-weight: 900;
@@ -220,7 +250,7 @@ body {
 }
 
 .side-titel em {
-  font-style: oblique 8deg;
+  font-style: normal;
   font-weight: 700;
 }
 
@@ -270,6 +300,7 @@ body {
   border-bottom: 1px solid var(--kant);
 }
 
+
 .projekt-titel {
   font-family: var(--serif);
   font-weight: 900;
@@ -282,7 +313,7 @@ body {
 }
 
 .projekt-titel em {
-  font-style: oblique 10deg;
+  font-style: normal;
   font-weight: 700;
   display: block;
   font-size: 0.52em;
@@ -506,17 +537,11 @@ body {
   object-fit: cover;
   display: block;
 }
-/* Mobile: bleed to edges */
-.billede-boks {
-  margin-left: -20px;
-  margin-right: -20px;
-  width: calc(100% + 40px);
-}
-@media (min-width: 820px) {
+@media (max-width: 820px) {
   .billede-boks {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
   }
 }
 /* DIMENSIONSGITTER  */
@@ -566,19 +591,17 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color: var(--sort);
+  color: var(--sten);
 }
 
 .pnav a {
-  color: var(--sort);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: var(--kant);
-  transition: text-decoration-color 0.15s;
+  color: var(--sten);
+  text-decoration: none;
+  transition: color 0.12s;
 }
 
 .pnav a:hover {
-  text-decoration-color: var(--sort);
+  color: var(--sort);
 }
 
 /* SIDEFOD  */
@@ -746,7 +769,7 @@ footer {
   flex-direction: column;
   list-style: none;
   position: fixed;
-  top: var(--nav-h);
+  top: 64px;
   left: 0;
   right: 0;
   background: var(--papir);
@@ -789,64 +812,39 @@ footer {
   color: var(--sort);
 }
 
-/*  RESPONSIVT — mobile-first  */
-
-/* Mobile base values */
-.projekt-hero {
-  padding: 24px 20px 20px;
-}
-.hurtig-links {
-  padding: 12px 20px;
-  gap: 6px;
-}
-.projekt-nav {
-  padding: 16px 20px;
-}
-footer {
-  padding: 14px 20px;
-  flex-direction: column;
-  gap: 4px;
-}
-.proces-afsnit {
-  grid-template-columns: 1fr;
-}
-.afsnit-venstre {
-  padding: 20px 20px 12px;
-  border-right: none;
-  border-bottom: 1px solid var(--kant);
-}
-.afsnit-hoejre,
-.afsnit-hoejre-bred {
-  padding: 20px;
-}
-
-/* Desktop overrides */
-@media (min-width: 820px) {
+/*  RESPONSIVT  */
+@media (max-width: 820px) {
   .projekt-hero {
-    padding: 36px 48px 28px;
+    padding: 24px 20px 20px;
   }
   .hurtig-links {
-    padding: 14px 48px;
-    gap: 8px;
+    padding: 12px 20px;
+    gap: 6px;
   }
   .projekt-nav {
-    padding: 16px 48px;
+    padding: 16px 20px;
   }
   footer {
-    padding: 14px 48px;
-    flex-direction: row;
-    gap: 0;
+    padding: 14px 20px;
   }
+
   .proces-afsnit {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
   }
+
   .afsnit-venstre {
-    padding: 36px 24px 36px 48px;
-    border-right: 1px solid var(--kant);
-    border-bottom: none;
+    padding: 20px 20px 12px;
+    border-right: none;
+    border-bottom: 1px solid var(--kant);
   }
+
   .afsnit-hoejre,
   .afsnit-hoejre-bred {
-    padding: 36px 48px;
+    padding: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 4px;
   }
 }
