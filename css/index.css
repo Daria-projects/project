@@ -59,6 +59,15 @@
   gap: 8px;
 }
 
+.hero-overtekst::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--sten);
+  flex-shrink: 0;
+}
+
 .hero-titel {
   font-family: var(--serif);
   font-size: clamp(56px, 16vw, 130px);
@@ -69,7 +78,7 @@
 }
 
 .hero-titel em {
-  font-style: normal;
+  font-style: oblique 10deg;
   font-weight: 700;
   display: block;
 }
@@ -139,7 +148,7 @@
   font-family: var(--serif);
   font-size: clamp(20px, 5vw, 38px);
   font-weight: 700;
-  font-style: normal;
+  font-style: oblique 10deg;
   color: var(--sten);
   white-space: nowrap;
   flex-shrink: 0;
@@ -238,6 +247,14 @@
 .foto-celle {
   display: none;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.foto-celle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .kort {
@@ -321,7 +338,7 @@
 }
 
 .kort-titel em {
-  font-style: normal;
+  font-style: oblique 10deg;
   display: block;
 }
 
@@ -455,11 +472,6 @@
    ══════════════════════════════════════════════════════════ */
 
 html {
-  overflow-x: hidden;
-}
-body > * {
-  max-width: 100vw;
-  box-sizing: border-box;
   overflow-x: hidden;
 }
 
@@ -693,7 +705,7 @@ body > * {
 }
 
 .ref-kat-titel em {
-  font-style: normal;
+  font-style: oblique 10deg;
   font-weight: 700;
   display: block;
 }
