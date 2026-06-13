@@ -101,7 +101,7 @@ em {
   --mono: "Fragment Mono", "Courier New", monospace;
 
   /* Layout */
-  --nav-h: 56px;
+  --nav-h: 64px;
   --gap: 20px;
   --radius: 2px;
   --trans: 0.22s cubic-bezier(0.22, 1, 0.36, 1);
@@ -169,7 +169,7 @@ a {
 }
 
 .top-nav {
-  height: 64px;
+  height: var(--nav-h);
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -350,10 +350,6 @@ footer {
 @media (min-width: 600px) {
   :root {
     --gap: 32px;
-    --nav-h: 64px;
-  }
-  .top-nav {
-    height: 64px;
   }
 
   .nav-links {
