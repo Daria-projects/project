@@ -626,7 +626,7 @@ html {
   font-family: var(--mono);
   font-size: 13px;
   letter-spacing: 0.04em;
-  color: #0d0d0b;
+  color: var(--sort);
   font-weight: 500;
   align-self: end;
 }
