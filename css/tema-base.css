@@ -300,7 +300,6 @@ body {
   border-bottom: 1px solid var(--kant);
 }
 
-
 .projekt-titel {
   font-family: var(--serif);
   font-weight: 900;
@@ -591,17 +590,18 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color: var(--sten);
+  color: var(--sort);
 }
 
 .pnav a {
-  color: var(--sten);
-  text-decoration: none;
-  transition: color 0.12s;
+  color: var(--sort);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.12s;
 }
 
 .pnav a:hover {
-  color: var(--sort);
+  opacity: 0.6;
 }
 
 /* SIDEFOD  */

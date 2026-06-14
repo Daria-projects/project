@@ -78,7 +78,7 @@
 }
 
 .hero-titel em {
-  font-style: oblique 10deg;
+  font-style: normal;
   font-weight: 700;
   display: block;
 }
@@ -148,7 +148,7 @@
   font-family: var(--serif);
   font-size: clamp(20px, 5vw, 38px);
   font-weight: 700;
-  font-style: oblique 10deg;
+  font-style: normal;
   color: var(--sten);
   white-space: nowrap;
   flex-shrink: 0;
@@ -338,7 +338,7 @@
 }
 
 .kort-titel em {
-  font-style: oblique 10deg;
+  font-style: normal;
   display: block;
 }
 
@@ -407,10 +407,9 @@
   transform: translateY(0);
 }
 
-/* ═══════════════════════════════════════════════════════════
+/* 
    FORSIDE — OM MIG STRIP
-   Slim chapter — bio + tags + link. No repeated name heading.
-   ═══════════════════════════════════════════════════════════ */
+   Slim chapter — bio + tags + link.  */
 
 .vaerktoej-liste {
   display: flex;
@@ -466,16 +465,13 @@
   }
 }
 
-/* ══════════════════════════════════════════════════════════
-   INDEX.CSS — Daria Novikova Portfolio
-   Single authoritative file. No duplicate rules.
-   ══════════════════════════════════════════════════════════ */
+/* INDEX.CSS — Daria Novikova Portfolio */
 
 html {
   overflow-x: hidden;
 }
 
-/* ── HERO ───────────────────────────────────────────────── */
+/*  HERO  */
 
 .hero-undertitel {
   display: none;
@@ -547,7 +543,7 @@ html {
   }
 }
 
-/* ── SECTION HEADERS ────────────────────────────────────── */
+/*  SECTION HEADERS  */
 
 .sektion-tekst {
   font-size: 13px;
@@ -573,7 +569,7 @@ html {
   color: var(--sort);
 }
 
-/* ── CARDS ──────────────────────────────────────────────── */
+/*  CARDS  */
 
 .kort-indre {
   display: grid;
@@ -642,7 +638,7 @@ html {
   }
 }
 
-/* ── REFLEKSION ─────────────────────────────────────────── */
+/*  REFLEKSION  */
 
 .ref-row {
   padding: 0;
@@ -705,7 +701,7 @@ html {
 }
 
 .ref-kat-titel em {
-  font-style: oblique 10deg;
+  font-style: normal;
   font-weight: 700;
   display: block;
 }
@@ -748,7 +744,7 @@ html {
   }
 }
 
-/* ── GLOBAL TYPOGRAPHY FLOOR ────────────────────────────── */
+/* typography  */
 
 .projekt-kicker {
   font-size: 13px;
@@ -792,8 +788,36 @@ html {
 .tjekliste li {
   font-size: 15px;
 }
+.projekt-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 48px;
+  border-top: 1px solid var(--kant);
+}
+
+@media (max-width: 820px) {
+  .projekt-nav {
+    padding: 16px var(--gap);
+  }
+}
+
 .pnav {
   font-size: 13px;
+}
+
+.pnav a {
+  font-family: var(--sans);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--sort);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.12s;
+}
+
+.pnav a:hover {
+  opacity: 0.6;
 }
 .sidebar-tilbage {
   font-size: 13px;
